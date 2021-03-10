@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Jemaat;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,7 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        return view('dashboard');
+        $data = Jemaat::all();
+        return view('dashboard', ['data'=>$data]);
     }
 }
