@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::middleware('role:admin')->get('/pernikahan', 'HomeController@pernikahan')->name('pernikahan');
+
+Route::get('week', 'Api\DataController@weekData');
