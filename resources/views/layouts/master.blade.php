@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GKE Haleluya Nanga Bulik | Dashboard</title>
+    <title>GKE Haleluya Nanga Bulik | @yield('title')</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -65,11 +65,11 @@
                         <i class="fas fa-expand-arrows-alt"></i>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                         <i class="fas fa-th-large"></i>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -78,8 +78,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img src="{{ asset('img/logo.png')}}" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-1" style="opacity: 1">
+                <img src="{{ asset('img/logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-1"
+                    style="opacity: 1">
                 <span style="font-size:14px" class="brand-text font-weight-light"><b>GKE</b> Haleluya Nanga Bulik</span>
             </a>
 
@@ -115,33 +115,37 @@
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                             with font-awesome or any other icon font library -->
-                        <li class="nav-header">MENU</li>
+                        <!-- <li class="nav-header">MENU</li> -->
                         <li class="nav-item">
-                            <a href="/tukau/administrator/index" class="nav-link">
+                            <a href="/dashboard" class="nav-link active">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
-                                    Main Dashboard
+                                    Dashboard
                                     <!-- <span class="badge badge-info right">2</span> -->
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-header">Data Warga Gereja</li>
                         <li class="nav-item">
-                            <a href="/tukau/administrator/user" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                            <a href="/jemaat" class="nav-link ">
+                                <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
-                                    Kelola User
+                                    Data Jemaat
+                                    <!-- <span class="badge badge-info right">2</span> -->
                                 </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="/tukau/administrator/product" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                            <a href="/pernikahan" class="nav-link ">
+                                <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
-                                    Kelola Product
+                                    Data Pernikahan
+                                    <!-- <span class="badge badge-info right">2</span> -->
                                 </p>
                             </a>
                         </li>
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -156,12 +160,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard</h1>
+                            <h1 class="m-0">@yield('title')</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard v1</li>
+                                <li class="breadcrumb-item active">@yield('title')</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -202,17 +206,26 @@
     </script>
     <!-- Bootstrap 4 -->
     <script src="{{ asset('admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    
+
     <!-- daterangepicker -->
     <script src="{{ asset('admin-lte/plugins/moment/moment.min.js') }}"></script>
     <script src="{{ asset('admin-lte/plugins/daterangepicker/daterangepicker.js') }}"></script>
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="{{ asset('admin-lte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}">
     </script>
-    
+
     <!-- AdminLTE App -->
     <script src="{{ asset('admin-lte/dist/js/adminlte.js') }}"></script>
-    
+
+    <script>
+        jQuery(document).ready(function ($) {
+            /* now you can use $ */
+        });
+        $(".nav-link").on("click", function () {
+            $(".nav-link").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    </script>
 </body>
 
 </html>

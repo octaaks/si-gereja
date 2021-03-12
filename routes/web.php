@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware('role:admin')->get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::middleware('role:admin')->get('/jemaat', 'HomeController@jemaat')->name('jemaat');
+Route::middleware('role:admin')->get('/pernikahan', 'HomeController@pernikahan')->name('pernikahan');
