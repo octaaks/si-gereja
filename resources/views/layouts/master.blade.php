@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/summernote/summernote-bs4.min.css') }}">
+    
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -216,6 +217,8 @@
 
     <!-- AdminLTE App -->
     <script src="{{ asset('admin-lte/dist/js/adminlte.js') }}"></script>
+
+    <script src="{{ asset('js/bootstrap-datetimepicker.min.js')}}"></script>
 
     <script>
         jQuery(document).ready(function ($) {

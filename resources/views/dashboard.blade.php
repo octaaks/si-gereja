@@ -15,7 +15,21 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
+
+    <!-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/weekpicker.css') }}">
+
 </head>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 form-group">
+            <div class="input-group" id="DateDemo">
+                <input type='text' id='weeklyDatePicker' placeholder="Select Week" />
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="card">
     <!-- /.card-header -->
@@ -87,30 +101,50 @@
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+
+<!-- <script src="{{ asset('daterangepicker/newpicker.js') }}"></script> -->
 <!-- Page specific script -->
 <script>
+    $(document).ready(function () {
+        moment.locale('en', {
+            week: {
+                dow: 1
+            } // Monday is the first day of the week
+        });
+
+        //Initialize the datePicker(I have taken format as mm-dd-yyyy, you can     //have your owh)
+        $("#weeklyDatePicker").datetimepicker({
+            format: 'MM-DD-YYYY'
+        });
+
+        //Get the value of Start and End of Week
+        $('#weeklyDatePicker').on('dp.change', function (e) {
+            var value = $("#weeklyDatePicker").val();
+            var firstDate = moment(value, "MM-DD-YYYY").day(1).format("MM-DD-YYYY");
+            var lastDate = moment(value, "MM-DD-YYYY").day(7).format("MM-DD-YYYY");
+            $("#weeklyDatePicker").val(firstDate + " - " + lastDate);
+            
+        });
+    });
+
     jQuery(document).ready(function ($) {
         /* now you can use $ */
-
-        $('#tb1').DataTable({
-            "paging": false,
-            "lengthChange": false,
+        
+        $("#tb1").DataTable({
             "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
             "responsive": true,
-        });
-
-        $('#tb2').DataTable({
-            "paging": false,
             "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
             "autoWidth": false,
+            "buttons": ["excel", "pdf"]
+        }).buttons().container().appendTo('#tb1_wrapper .col-md-6:eq(0)');
+        
+        $("#tb2").DataTable({
+            "searching": false,
             "responsive": true,
-        });
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["excel", "pdf"]
+        }).buttons().container().appendTo('#tb2_wrapper .col-md-6:eq(0)');
     });
 </script>
 
