@@ -15,6 +15,7 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.0",
+        "nao-pon/flysystem-google-drive": "~1.1",
         "spatie/laravel-permission": "^4.0"
     },
     "require-dev": {

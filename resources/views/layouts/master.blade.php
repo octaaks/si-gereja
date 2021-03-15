@@ -126,7 +126,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-header">Data Warga Gereja</li>
+                        <!-- <li class="nav-header">Data Warga Gereja</li> -->
                         <li class="nav-item">
                             <a href="/jemaat" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
@@ -142,6 +142,26 @@
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Data Pernikahan
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="/liturgi" class="nav-link ">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    Liturgi Ibadah
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="/warta" class="nav-link ">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    Warta Gereja
                                     <!-- <span class="badge badge-info right">2</span> -->
                                 </p>
                             </a>

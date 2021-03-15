@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Jemaat;
 use App\Pernikahan;
+use App\Liturgi;
+use App\Warta;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -53,6 +55,7 @@ class HomeController extends Controller
             ->select(
                 'head_of_family',
                 'name',
+                DB::raw('YEAR(CURDATE())-DATE_FORMAT(date_of_birth, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date_of_birth, "%d-%c-"),YEAR(CURDATE())) as date_of_birth')
             )
             ->orderBy('date_of_birth', 'ASC')
@@ -60,6 +63,7 @@ class HomeController extends Controller
             $data2 = Pernikahan::whereRaw("DAYOFYEAR(date) BETWEEN $first_date AND $last_date")
             ->select(
                 'name',
+                DB::raw('YEAR(CURDATE())-DATE_FORMAT(date, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date, "%d-%c-"),YEAR(CURDATE())) as date')
             )
             ->orderBy('date', 'ASC')
@@ -83,6 +87,7 @@ class HomeController extends Controller
             ->select(
                 'head_of_family',
                 'name',
+                DB::raw('YEAR(CURDATE())-DATE_FORMAT(date_of_birth, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date_of_birth, "%d-%c-"),YEAR(CURDATE())) as date_of_birth')
             )
             ->orderBy('date_of_birth', 'ASC')
@@ -92,6 +97,7 @@ class HomeController extends Controller
             ->orWhereRaw("DAYOFYEAR(date) BETWEEN $first_date2 AND $last_date2")
             ->select(
                 'name',
+                DB::raw('YEAR(CURDATE())-DATE_FORMAT(date, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date, "%d-%c-"),YEAR(CURDATE())) as date')
             )
             ->orderBy('date', 'ASC')
