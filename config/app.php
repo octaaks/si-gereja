@@ -177,6 +177,8 @@ return [
 
         // gdrive
         App\Providers\GoogleDriveServiceProvider::class,
+        // pdf viewer
+        // Goodnesskay\LaravelPdfViewer\LaravelPdfViewerServiceProvider::class,
     ],
 
     /*

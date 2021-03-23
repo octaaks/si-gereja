@@ -24,7 +24,7 @@ class WartaController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
+            'file' => 'required|file|mimes:pdf|max:2048',
         ]);
 
         // menyimpan data file yang diupload ke variabel $file

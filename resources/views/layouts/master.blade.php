@@ -118,7 +118,7 @@
                             with font-awesome or any other icon font library -->
                         <!-- <li class="nav-header">MENU</li> -->
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link active">
+                            <a href="/admin/dashboard" class="nav-link active">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Dashboard
@@ -128,7 +128,7 @@
                         </li>
                         <!-- <li class="nav-header">Data Warga Gereja</li> -->
                         <li class="nav-item">
-                            <a href="/jemaat" class="nav-link ">
+                            <a href="/admin/jemaat" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Data Jemaat
@@ -138,7 +138,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="/pernikahan" class="nav-link ">
+                            <a href="/admin/pernikahan" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Data Pernikahan
@@ -148,7 +148,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a href="/liturgi" class="nav-link ">
+                            <a href="/admin/liturgi" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Liturgi Ibadah
@@ -158,7 +158,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a href="/warta" class="nav-link ">
+                            <a href="/admin/warta" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Warta Gereja
