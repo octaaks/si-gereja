@@ -175,6 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // gdrive
+        App\Providers\GoogleDriveServiceProvider::class,
+        // pdf viewer
+        // Goodnesskay\LaravelPdfViewer\LaravelPdfViewerServiceProvider::class,
     ],
 
     /*
