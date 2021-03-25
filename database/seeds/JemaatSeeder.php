@@ -14,7 +14,7 @@ class JemaatSeeder extends Seeder
     {
         // $appUrl = env('APP_URL');
         Jemaat::truncate();
-        $json = json_decode(file_get_contents('http://localhost:8000/json/jemaat.json'));
+        $json = json_decode(file_get_contents('http://localhost/si-gereja/public/json/jemaat.json'));
         
         foreach ($json as $j) {
             Jemaat::create(array(
