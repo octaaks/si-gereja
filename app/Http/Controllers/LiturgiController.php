@@ -53,7 +53,7 @@ class LiturgiController extends Controller
 
         $warta = new Liturgi;
         $warta -> title = $request-> title;
-        $warta -> filename = "/".$tujuan_upload.'/'.$nama_file;
+        $warta -> filename = $tujuan_upload.'/'.$nama_file;
         $warta->save();
 
         return redirect('/liturgi')->with('success', 'Liturgi terupload!');
@@ -111,7 +111,7 @@ class LiturgiController extends Controller
             $tujuan_upload = 'storage/liturgi';
             $file->move($tujuan_upload, $nama_file);
             
-            $data['filename'] = "/".$tujuan_upload."/".$nama_file; // Update field photo
+            $data['filename'] = $tujuan_upload."/".$nama_file; // Update field photo
         }
 
         try {

@@ -92,7 +92,7 @@
         <div class="card-body">
             <div style="margin:10px" class="row">
                 <div class="col-md-auto">
-                    <a href="/warta/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Upload
+                    <a href="warta/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Upload
                         Warta Gereja</a>
                 </div>
             </div>

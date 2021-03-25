@@ -29,16 +29,8 @@
 
 <body>
     <div class="container">
-        <!-- <iframe src="https://docs.google.com/gview?url=http://www.africau.edu/images/default/sample.pdf&embedded=true"
-            style="width: 90%; height: 70%">
-            <p>Your browser does not support iframes.</p>
-        </iframe> -->
-
-        <iframe src="https://docs.google.com/viewer?url=http://www.africau.edu/images/default/sample.pdf&embedded=true"
+        <iframe src="https://docs.google.com/viewer?url={{ asset('/') }}{{$liturgi->filename}}&embedded=true"
             style="width:70%; height:80%;" frameborder="0"></iframe>
-
-        <!-- <iframe src="/ViewerJS/#../www.africau.edu/images/default/sample.pdf" width='400' height='300' allowfullscreen
-            webkitallowfullscreen></iframe> -->
+            <embed src="{{ asset('/') }}{{$liturgi->filename}}" type="application/pdf" width="100%" height="600px" />
     </div>
-
 </body>

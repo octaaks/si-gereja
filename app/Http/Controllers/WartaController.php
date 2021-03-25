@@ -37,7 +37,7 @@ class WartaController extends Controller
 
         $warta = new Warta;
         $warta -> title = $request-> title;
-        $warta -> filename = "/".$tujuan_upload.'/'.$nama_file;
+        $warta -> filename = $tujuan_upload.'/'.$nama_file;
         $warta->save();
 
         return redirect('/warta')->with('success', 'Warta terupload!');
@@ -71,7 +71,7 @@ class WartaController extends Controller
             $tujuan_upload = 'storage/warta';
             $file->move($tujuan_upload, $nama_file);
             
-            $data['filename'] = "/".$tujuan_upload."/".$nama_file; // Update field photo
+            $data['filename'] = $tujuan_upload."/".$nama_file; // Update field photo
         }
 
         try {
