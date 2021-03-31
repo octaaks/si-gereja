@@ -48,10 +48,10 @@
                         </div>
                     </div>
                     <div class="right">
-                        <!-- <a href="" button class="btn btn-primary">Kontak</a> -->
-                        <form action="#kontak">
+                        <a href="#kontak" button class="btn btn-primary">Kontak</a>
+                        <!-- <form action="#kontak">
                                 <button class="btn btn-primary"> Kontak </button>
-                        </form>
+                        </form> -->
                     </div>
                 </nav>
                 <div class="hero flex items-center justify-between">
@@ -65,7 +65,10 @@
                         <h1>Amsal <span> 19:21 </span> </h1>
                         <p>Banyaklah rancangan di hati manusia, tetapi keputusan TUHANlah yang terlaksana.</p>
                         <div>
-                            <button class="btn btn-secondary">LIVE STREAMING</button>
+                            <!-- <button class="btn btn-secondary">LIVE STREAMING</button> -->
+                            <form action="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA">
+                                 <button class="btn btn-secondary">LIVE STREAMING</button>
+                        </form>
                         </div>
                     </div>
                 </div>
