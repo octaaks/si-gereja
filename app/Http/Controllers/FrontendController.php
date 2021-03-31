@@ -9,6 +9,11 @@ use App\Warta;
 
 class FrontendController extends Controller
 {
+    public function index()
+    {
+        
+        return view('frontend.home');
+    }
     public function listLiturgi()
     {
         $liturgi = DB::table('liturgi')->paginate(10);

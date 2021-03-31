@@ -24,6 +24,7 @@ Route::any('ViewerJS/{all?}', function () {
 });
 
 //frontend
+Route::get('/', 'FrontendController@index');
 Route::get('/warta', 'FrontendController@listWarta');
 Route::get('/warta/view/{id}', 'FrontendController@viewWarta');
 
