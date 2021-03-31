@@ -40,7 +40,7 @@ header{
 }
 
 header nav .left a{
-    color: var(--primary);
+    color: var(--dark);
     text-decoration: none;
     margin-right: 2rem;
     text-transform: uppercase;

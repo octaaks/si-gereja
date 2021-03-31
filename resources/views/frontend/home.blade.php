@@ -38,7 +38,7 @@
                 <nav id="main-nav" class="flex items-center justify-between">
                     <div class="left flex items-center">
                         <div class="branding">
-                            <img style="height:72px" src="./img/logo-text.png" alt="">
+                            <img style="height:70px" src="./img/logo1.png" alt="">
                         </div>
                         <div class="left">
                             <a href="/warta">Warta Jemaat</a>
@@ -48,7 +48,10 @@
                         </div>
                     </div>
                     <div class="right">
-                        <a href="#kontak" button class="btn btn-primary">Kontak</a>
+                        <!-- <a href="" button class="btn btn-primary">Kontak</a> -->
+                        <form action="#kontak">
+                                <button class="btn btn-primary"> Kontak </button>
+                        </form>
                     </div>
                 </nav>
                 <div class="hero flex items-center justify-between">
@@ -58,7 +61,7 @@
                         </div>
                     </div>
                     <div class="right flex-1">
-                        <h6>Joe Ackerman</h6>
+                        <!-- <h6>Joe Ackerman</h6> -->
                         <h1>Amsal <span> 19:21 </span> </h1>
                         <p>Banyaklah rancangan di hati manusia, tetapi keputusan TUHANlah yang terlaksana.</p>
                         <div>
@@ -126,7 +129,7 @@
     <section class="work">
         <div class="container">
             <h1 class="section-heading"> <span>Video </span>Ibadah</h1>
-            <p> sdhg alskjgh jskh jhds khsdjkhag ksdjhg s hsj dghjkas jkghsj </p>
+            <p> GKE Haleluya Nanga Bulik</p>
 
             <div class="flex items-center justify-between">
                 <iframe width="512" height="360" src="https://www.youtube.com/embed/z6CSW2yu8Mg"
