@@ -162,6 +162,11 @@ section.about .social a img{
 
 /* jadwal ibadah */
 
+.img-service{
+    width: 100px;
+    height: 100px;
+}
+
 .section-heading{
     color: var(--secondary);
     text-align: center;
@@ -219,7 +224,7 @@ section.service .card-wrapper .card p{
 }
 
 section.service .card-wrapper .card:hover{
-    background: var(--dark);
+    background: rgb(61, 207, 211, 150);
 }
 
 section.service .card-wrapper .card:hover h2, section.service .card-wrapper .card:hover p {

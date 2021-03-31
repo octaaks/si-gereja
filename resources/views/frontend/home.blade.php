@@ -104,19 +104,19 @@
             <p> GKE Haleluya Nanga Bulik </p>
             <div class="card-wrapper">
                 <div class="card">
-                    <img src="./image/brush.svg" alt="">
+                    <img class="img-service" src="./image/icon-church.png" alt="">
                     <h2> Ibadah Minggu </h2>
                     <p> Pukul 10:00 WIB.</p>
                     <p> Pukul 17:00 WIB.</p>
                 </div>
                 <div class="card">
-                    <img src="./image/code.svg" alt="">
+                    <img class="img-service" src="./image/icon-kids.png" alt="">
                     <h2> Ibadah Sekolah Minggu </h2>
                     <p> Pukul 08:00 WIB.</p>
 
                 </div>
                 <div class="card">
-                    <img src="./image/brush.svg" alt="">
+                    <img class="img-service" src="./image/icon-youth.png" alt="">
                     <h2> Ibadah Pemuda </h2>
                     <p> Kamis | Pukul 16:00 WIB.</p>
 
@@ -136,10 +136,11 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <iframe width="512" height="360" src="https://www.youtube.com/embed/z6CSW2yu8Mg"
+                <iframe width="512" height="360" src="https://www.youtube.com/embed/T2zWT5OOvoY"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
+                    
             </div>
         </div>
     </section>
@@ -151,17 +152,17 @@
             <p> sdhg alskjgh jskh jhds khsdjkhag ksdjhg s hsj dghjkas jkghsj </p>
             <div class="card-wrapper">
                 <div class="card">
-                    <img src="./image/phone-2.svg" alt="">
+                    <img class="img-service" src="./image/icon-telp.png" alt="">
                     <h1> Call Us On</h1>
                     <h6> 0821-xxxx-xxxx</h6>
                 </div>
                 <div class="card">
-                    <img src="./image/phone-2.svg" alt="">
+                    <img class="img-service" src="./image/icon-email.png" alt="">
                     <h1> Email Us At</h1>
                     <h6> gkehaleluya@gmail.com</h6>
                 </div>
                 <div class="card">
-                    <img src="./image/map.svg" alt="">
+                    <img class="img-service" src="./image/icon-loc.png" alt="">
                     <h1> Visit Office</h1>
                     <h6> Jl.GTM Yusuf Nanga Bulik, Kalimantan Tengah</h6>
                 </div>
@@ -169,12 +170,12 @@
 
             <form action="">
                 <div class="input-wrap">
-                    <input type="text" placeholder="Your Name *">
-                    <input type="email" placeholder="Your Email *">
+                    <input type="text" placeholder="Name *">
+                    <input type="email" placeholder="Email *">
                 </div>
                 <div class="input-wrap-2">
-                    <input type="text" placeholder="Your subject...">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                    <input type="text" placeholder="Subject...">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Tulis Pesan...."></textarea>
                 </div>
                 <div class="btn-wrapper">
                     <button class="btn btn-primary"> SEND MESSAGE </button>
@@ -186,7 +187,7 @@
     <!-- footer -->
 
     <footer>
-        <img class="footer-logo" src="./image/GKE.jpg" alt="">
+        <img style="height:70px"  class="footer-logo" src="./img/logo.png" alt="">
         <div class="footer-socials">
             <a href="#"><img src="./image/website.svg" alt=""></a>
             <a href="#"><img src="./image/facebook.svg" alt=""></a>
