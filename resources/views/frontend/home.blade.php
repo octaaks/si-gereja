@@ -33,12 +33,12 @@
     <!-- desktop nav -->
     <header>
 
-        <div style="background-image: url('gereja.jpg'); background-size: cover">
+        <div style="background-image: url('worship.jpg'); background-size: cover">
             <div class="container">
                 <nav id="main-nav" class="flex items-center justify-between">
                     <div class="left flex items-center">
                         <div class="branding">
-                            <img src="./image/GKE.jpg" alt="">
+                            <img style="height:72px" src="./img/logo-text.png" alt="">
                         </div>
                         <div class="left">
                             <a href="/warta">Warta Jemaat</a>
