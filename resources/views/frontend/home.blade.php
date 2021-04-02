@@ -67,8 +67,8 @@
                         <div>
                             <!-- <button class="btn btn-secondary">LIVE STREAMING</button> -->
                             <form action="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA">
-                                 <button class="btn btn-secondary">LIVE STREAMING</button>
-                        </form>
+                                <button class="btn btn-secondary">LIVE STREAMING</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -132,18 +132,19 @@
     <section class="work">
         <div class="container">
             <h1 class="section-heading"> <span>Video </span>Ibadah</h1>
-            <p> GKE Haleluya Nanga Bulik</p>
-
+            <p>GKE Haleluya Nanga Bulik</p>
+            
             <div class="flex items-center justify-between">
-                <iframe width="512" height="360" src="https://www.youtube.com/embed/z6CSW2yu8Mg"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <iframe width="512" height="360" src="https://www.youtube.com/embed/T2zWT5OOvoY"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                @foreach($video as $item)
+                    @if( $loop->first or $loop->iteration <= 3 ) 
                     
+                    <iframe width="320" height="180"
+                        src="https://www.youtube.com/embed/{{$item->url}}" title="{{$item->title}}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -190,7 +191,7 @@
     <!-- footer -->
 
     <footer>
-        <img style="height:70px"  class="footer-logo" src="./img/logo.png" alt="">
+        <img style="height:70px" class="footer-logo" src="./img/logo.png" alt="">
         <div class="footer-socials">
             <a href="#"><img src="./image/website.svg" alt=""></a>
             <a href="#"><img src="./image/facebook.svg" alt=""></a>

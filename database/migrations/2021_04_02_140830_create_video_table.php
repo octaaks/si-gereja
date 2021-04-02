@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWartaTable extends Migration
+class CreateVideoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateWartaTable extends Migration
      */
     public function up()
     {
-        Schema::create('warta', function (Blueprint $table) {
+        Schema::create('video', function (Blueprint $table) {
             $table->id();
             $table->string('title', 191);
-            $table->string('filename', 191);
+            $table->string('url', 191);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateWartaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('warta');
+        Schema::dropIfExists('video');
     }
 }

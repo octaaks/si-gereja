@@ -28,6 +28,6 @@ class CreateLiturgiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('liturgis');
+        Schema::dropIfExists('liturgi');
     }
 }

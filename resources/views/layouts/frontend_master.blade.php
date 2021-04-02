@@ -47,7 +47,7 @@
             <nav id="main-nav" class="flex items-center justify-between">
                 <div class="left flex items-center">
                     <div class="branding">
-                        <img style="height:70px" src="./img/logo1.png" alt="">
+                    <a href="/"><img style="height:70px" src="./img/logo1.png" alt=""></a>
                     </div>
                     <div class="left">
                         <a href="/warta">Warta Jemaat</a>

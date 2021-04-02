@@ -79,10 +79,10 @@
         <br><br>
         <div class="row">
             <div class="col-12">
-                <form action="{{ route("store_warta") }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route("store_video") }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
-                        <label for="title" class="col-md-1 col-form-label text-md-right">Judul</label>
+                        <label for="title" class="col-md-2 col-form-label text-md-right">Judul</label>
 
                         <div class="col-md-6">
                             <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
@@ -97,12 +97,13 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="file" class="col-md-1 col-form-label text-md-right">File</label>
+                        <label for="file" class="col-md-2 col-form-label text-md-right">URL Video</label>
 
                         <div class="col-md-6">
-                            <input type="file" name="file" class="form-control">
+                            <input id="url" type="text" class="form-control @error('url') is-invalid @enderror"
+                                name="url" value="" autofocus>
 
-                            @error('file')
+                            @error('url')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

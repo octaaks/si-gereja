@@ -31,6 +31,9 @@ Route::get('/warta/view/{id}', 'FrontendController@viewWarta');
 Route::get('/liturgi', 'FrontendController@listLiturgi');
 Route::get('/liturgi/view/{id}', 'FrontendController@viewLiturgi');
 
+Route::get('/video', 'FrontendController@listVideo');
+Route::get('/video/view/{id}', 'FrontendController@viewVideo');
+
 //admin
 Auth::routes();
 

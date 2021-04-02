@@ -167,6 +167,16 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a href="/admin/video" class="nav-link ">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    Video
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

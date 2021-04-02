@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Warta Gereja')
+@section('title', 'Video Ibadah')
 @section('content')
 
 <head>
@@ -92,8 +92,7 @@
         <div class="card-body">
             <div style="margin:10px" class="row">
                 <div class="col-md-auto">
-                    <a href="warta/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Upload
-                        Warta Gereja</a>
+                    <a href="{{ route("create_video") }}" class="btn btn-primary btn-md" role="button" aria-disabled="true">Tambahkan Video Ibadah</a>
                 </div>
             </div>
 
@@ -111,11 +110,11 @@
                     <tr>
                         <td>{{ $index +1 }}</td>
                         <td>{{ $item-> title}}</td>
-                        <td>{{ $item-> filename}}</td>
+                        <td>{{ $item-> url}}</td>
                         <td width="20%">
-                            <a class="btn btn-primary  btn-sm" href="/admin/warta/{{$item->id}}/edit/"
+                            <a class="btn btn-primary  btn-sm" href="/admin/video/{{$item->id}}/edit/"
                                 role="button">Edit</a>
-                            <a class="btn btn-danger  btn-sm" method="delete" href="/admin/warta/{{$item->id}}/delete"
+                            <a class="btn btn-danger  btn-sm" method="delete" href="/admin/video/{{$item->id}}/delete"
                                 role="button">Delete</a>
                         </td>
                     </tr>

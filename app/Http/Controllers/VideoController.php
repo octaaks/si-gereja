@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Video;
+use File;
 
 class VideoController extends Controller
 {
@@ -14,6 +17,8 @@ class VideoController extends Controller
     public function index()
     {
         //
+        $data = Video::all();
+        return view('video.index', ['data'=>$data]);
     }
 
     /**
@@ -24,6 +29,7 @@ class VideoController extends Controller
     public function create()
     {
         //
+        return view('video.form');
     }
 
     /**
@@ -35,6 +41,17 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'title' => 'required',
+            'url' => 'required',
+        ]);
+
+        $video = new Video;
+        $video -> title = $request-> title;
+        $video -> url = $request-> url;
+        $video->save();
+
+        return redirect('/admin/video')->with('success', 'Video tersimpan!');
     }
 
     /**
@@ -57,6 +74,11 @@ class VideoController extends Controller
     public function edit($id)
     {
         //
+        $data = Video::find($id);
+        if (!$data) {
+            return redirect('/admin/video')->with('error', 'Data tidak ditemukan!');
+        }
+        return view('video.edit', ['data'=> $data]);
     }
 
     /**
@@ -69,6 +91,21 @@ class VideoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'title' => 'required',
+            'url' => 'required',
+        ]);
+
+        $video = Video::find($id);
+        
+        if (!$video) {
+            return redirect('/admin/video')->with('error', 'Video tidak ada!');
+        }
+        $video -> title     = $request-> title;
+        $video -> url       = $request-> url;
+        $video->save();
+        
+        return redirect('/admin/video')->with('success', 'Video tersimpan!');
     }
 
     /**
@@ -80,5 +117,12 @@ class VideoController extends Controller
     public function destroy($id)
     {
         //
+        $video = Video::find($id);
+        if (!$video) {
+            return redirect('/admin/video')->with('error', 'Video tidak ada!');
+        }
+        $video->delete($id);
+
+        return redirect('/admin/video')->with('success', 'Data telah dihapus!');
     }
 }
