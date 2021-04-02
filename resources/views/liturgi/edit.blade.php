@@ -79,7 +79,7 @@
         <br><br>
         <div class="row">
             <div class="col-12">
-                <form action="/liturgi/{{$data->id}}/update" method="post" enctype="multipart/form-data">
+                <form action="/admin/liturgi/{{$data->id}}/update" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label for="title" class="col-md-1 col-form-label text-md-right">Judul</label>

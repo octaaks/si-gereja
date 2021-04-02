@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Edit Warta')
+@section('title', 'Upload Warta Gereja')
 @section('content')
 
 <head>
@@ -79,14 +79,14 @@
         <br><br>
         <div class="row">
             <div class="col-12">
-                <form action="/admin/warta/{{$data->id}}/update" method="post" enctype="multipart/form-data">
+                <form action="{{ route("store_warta") }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label for="title" class="col-md-1 col-form-label text-md-right">Judul</label>
 
                         <div class="col-md-6">
                             <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
-                                name="title" value="{{ $data->title }}" autofocus>
+                                name="title" value="" autofocus>
 
                             @error('title')
                             <span class="invalid-feedback" role="alert">

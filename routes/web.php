@@ -56,6 +56,13 @@ Route::middleware('role:admin')->post('admin/warta/{id}/update', 'WartaControlle
 Route::middleware('role:admin')->post('admin/warta/store', 'WartaController@store')->name('store_warta');
 Route::middleware('role:admin')->get('admin/warta/{id}/delete', 'WartaController@destroy')->name('delete_warta');
 
+Route::middleware('role:admin')->get('admin/video', 'VideoController@index')->name('video');
+Route::middleware('role:admin')->get('admin/video/{id}/edit', 'VideoController@edit')->name('edit_video');
+Route::middleware('role:admin')->get('admin/video/create', 'VideoController@create')->name('create_video');
+Route::middleware('role:admin')->post('admin/video/{id}/update', 'VideoController@update')->name('update_video');
+Route::middleware('role:admin')->post('admin/video/store', 'VideoController@store')->name('store_video');
+Route::middleware('role:admin')->get('admin/video/{id}/delete', 'VideoController@destroy')->name('delete_video');
+
 //google upload
 Route::get('/test', function () {
     Storage::disk('google')->put('test.txt', 'samlekom');

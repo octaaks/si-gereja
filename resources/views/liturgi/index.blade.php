@@ -113,9 +113,9 @@
                         <td>{{ $item-> title}}</td>
                         <td>{{ $item-> filename}}</td>
                         <td width="20%">
-                            <a class="btn btn-primary  btn-sm" href="/liturgi/{{$item->id}}/edit/"
+                            <a class="btn btn-primary  btn-sm" href="/admin/liturgi/{{$item->id}}/edit/"
                                 role="button">Edit</a>
-                            <a class="btn btn-danger  btn-sm" method="delete" href="/liturgi/{{$item->id}}/delete"
+                            <a class="btn btn-danger  btn-sm" method="delete" href="/admin/liturgi/{{$item->id}}/delete"
                                 role="button">Delete</a>
                         </td>
                     </tr>

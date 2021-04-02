@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Manage jemaat')
+@section('title', 'Ulang Tahun jemaat')
 @section('content')
 
 <head>
@@ -22,7 +22,7 @@
 
 </head>
 <div class="container">
-Warga yang berulang tahun pada {{$tgl}}
+    Warga yang berulang tahun pada {{$tgl}}
     <div class="input-group" id="DateDemo">
         <input type='text' autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id='weeklyDatePicker' placeholder="Select Week" />
         <button id='weekBtn'>Tampilkan</button>
