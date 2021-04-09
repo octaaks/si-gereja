@@ -40,14 +40,14 @@ class WartaController extends Controller
         $warta -> filename = $tujuan_upload.'/'.$nama_file;
         $warta->save();
 
-        return redirect('/warta')->with('success', 'Warta terupload!');
+        return redirect('/admin/warta')->with('success', 'Warta terupload!');
     }
 
     public function edit($id)
     {
         $data = Warta::find($id);
         if (!$data) {
-            return redirect('/warta')->with('error', 'Data tidak ditemukan!');
+            return redirect('/admin/warta')->with('error', 'Data tidak ditemukan!');
         }
         return view('warta.edit', ['data'=> $data]);
     }
@@ -77,9 +77,9 @@ class WartaController extends Controller
         try {
             DB::table('warta') -> where('id', '=', $id) -> update($data);
                         
-            return redirect('/warta')->with('success', 'Data saved succesfully!');
+            return redirect('/admin/warta')->with('success', 'Data saved succesfully!');
         } catch (\Exception $e) {
-            return redirect('/warta')->with('error', 'Data tidak ada!');
+            return redirect('/admin/warta')->with('error', 'Data tidak ada!');
         }
     }
 
@@ -89,11 +89,11 @@ class WartaController extends Controller
         $warta = Warta::find($id);
         
         if (!$warta) {
-            return redirect('/warta')->with('error', 'Data tidak ada!!');
+            return redirect('/admin/warta')->with('error', 'Data tidak ada!!');
         }
         $warta->delete($id);
         File::delete($warta->filename);
 
-        return redirect('/warta')->with('success', 'Data telah dihapus!');
+        return redirect('/admin/warta')->with('success', 'Data telah dihapus!');
     }
 }

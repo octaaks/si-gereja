@@ -56,7 +56,7 @@ class LiturgiController extends Controller
         $warta -> filename = $tujuan_upload.'/'.$nama_file;
         $warta->save();
 
-        return redirect('/liturgi')->with('success', 'Liturgi terupload!');
+        return redirect('/admin/liturgi')->with('success', 'Liturgi terupload!');
     }
 
     /**
@@ -80,7 +80,7 @@ class LiturgiController extends Controller
     {
         $data = Liturgi::find($id);
         if (!$data) {
-            return redirect('/liturgi')->with('error', 'Data tidak ditemukan!');
+            return redirect('/admin/liturgi')->with('error', 'Data tidak ditemukan!');
         }
         return view('liturgi.edit', ['data'=> $data]);
     }
@@ -117,9 +117,9 @@ class LiturgiController extends Controller
         try {
             DB::table('liturgi') -> where('id', '=', $id) -> update($data);
                         
-            return redirect('/liturgi')->with('success', 'Data saved succesfully!');
+            return redirect('/admin/liturgi')->with('success', 'Data saved succesfully!');
         } catch (\Exception $e) {
-            return redirect('/liturgi')->with('error', 'Data tidak ada!');
+            return redirect('/admin/liturgi')->with('error', 'Data tidak ada!');
         }
     }
 
@@ -135,11 +135,11 @@ class LiturgiController extends Controller
         $liturgi = Liturgi::find($id);
         
         if (!$liturgi) {
-            return redirect('/liturgi')->with('error', 'Data tidak ada!!');
+            return redirect('/admin/liturgi')->with('error', 'Data tidak ada!!');
         }
         $liturgi->delete($id);
         File::delete($liturgi->filename);
 
-        return redirect('/liturgi')->with('success', 'Data telah dihapus!');
+        return redirect('/admin/liturgi')->with('success', 'Data telah dihapus!');
     }
 }

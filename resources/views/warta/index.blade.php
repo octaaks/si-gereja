@@ -113,9 +113,9 @@
                         <td>{{ $item-> title}}</td>
                         <td>{{ $item-> filename}}</td>
                         <td width="20%">
-                            <a class="btn btn-primary  btn-sm" href="/warta/{{$item->id}}/edit/"
+                            <a class="btn btn-primary  btn-sm" href="/admin/warta/{{$item->id}}/edit/"
                                 role="button">Edit</a>
-                            <a class="btn btn-danger  btn-sm" method="delete" href="/warta/{{$item->id}}/delete"
+                            <a class="btn btn-danger  btn-sm" method="delete" href="/admin/warta/{{$item->id}}/delete"
                                 role="button">Delete</a>
                         </td>
                     </tr>
