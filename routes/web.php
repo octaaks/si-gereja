@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 //DocumentViewer Library
 Route::any('ViewerJS/{all?}', function () {
-    return View::make('ViewerJS.index');
+    return view::make('ViewerJS.index');
 });
 
 //frontend
