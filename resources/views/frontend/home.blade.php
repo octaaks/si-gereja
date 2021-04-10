@@ -8,31 +8,13 @@
     <title>Gereja</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-home.css">
 
 </head>
 
 
 <body>
-    <!-- mobile nav -->
-    <!-- <div class="site-main-wrapper">
-        <button class="hamberger">
-            <img src="./image/hamberger.svg" alt="">
-        </button>
-
-        <div class="mobile-nav">
-            <button class="times"><img src="./image/times.svg" alt=""></button>
-            <ul>
-                <li><a href="#">Warta Jemaat</a></li>
-                <li><a href="#">Liturgi</a></li>
-                <li><a href="#">Renungan</a></li>
-                <li><a href="#">Video</a></li>
-            </ul>
-        </div> -->
-
-    <!-- desktop nav -->
     <header>
-
         <div style="background-image: url('worship.jpg'); background-size: cover">
             <div class="container">
                 <nav id="main-nav" class="flex items-center justify-between">
@@ -133,18 +115,16 @@
         <div class="container">
             <h1 class="section-heading"> <span>Video </span>Ibadah</h1>
             <p>GKE Haleluya Nanga Bulik</p>
-            
+
             <div class="flex items-center justify-between">
                 @foreach($video as $item)
-                    @if( $loop->first or $loop->iteration <= 3 ) 
-                    
-                    <iframe width="320" height="180"
-                        src="https://www.youtube.com/embed/{{$item->url}}" title="{{$item->title}}" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                @if( $loop->first or $loop->iteration <= 3 ) <iframe width="320" height="180"
+                    src="https://www.youtube.com/embed/{{$item->url}}" title="{{$item->title}}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
 
                     @endif
-                @endforeach
+                    @endforeach
             </div>
         </div>
     </section>
