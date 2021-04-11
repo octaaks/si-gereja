@@ -152,17 +152,28 @@
                 </div>
             </div>
 
-            <form action="">
+            @if(session('success'))
+            <div class="alert alert-success" id="email" role="alert">
+                {{session('success')}}
+            </div>
+            @endif
+            @if(session('error'))
+            <div class="alert alert-danger" id="email" role="alert">
+                {{session('error')}}
+            </div>
+            @endif
+            <form action="{{ route('send.email') }}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="input-wrap">
-                    <input type="text" placeholder="Name *">
-                    <input type="email" placeholder="Email *">
+                    <input type="text" name="name" placeholder="Name *">
+                    <input type="email" name="email" placeholder=" Email *">
                 </div>
                 <div class="input-wrap-2">
-                    <input type="text" placeholder="Subject...">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tulis Pesan...."></textarea>
+                    <input type="text" name="subject" placeholder="Subject...">
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Tulis Pesan...."></textarea>
                 </div>
                 <div class="btn-wrapper">
-                    <button class="btn btn-primary"> SEND MESSAGE </button>
+                    <input type="submit" class="btn btn-primary" value="KIRIM EMAIL"></input>
                 </div>
             </form>
         </div>

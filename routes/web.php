@@ -19,9 +19,10 @@ Route::get('/', function () {
 });
 
 //DocumentViewer Library
-Route::any('ViewerJS/{all?}', function () {
-    return view::make('ViewerJS.index');
-});
+// Route::any('ViewerJS/{all?}', function () {
+//     return view::make('ViewerJS.index');
+// });
+
 
 //frontend
 Route::get('/', 'FrontendController@index');
@@ -33,6 +34,10 @@ Route::get('/liturgi/view/{id}', 'FrontendController@viewLiturgi');
 
 Route::get('/video', 'FrontendController@listVideo');
 Route::get('/video/view/{id}', 'FrontendController@viewVideo');
+
+//email contact
+// Route untuk mengirim email
+Route::post('/send-email', 'FrontendController@sendEmail')->name('send.email');
 
 //admin
 Auth::routes();
