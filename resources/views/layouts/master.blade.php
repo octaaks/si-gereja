@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/summernote/summernote-bs4.min.css') }}">
-    
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -146,7 +146,7 @@
                                 </p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="/admin/liturgi" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
@@ -156,7 +156,7 @@
                                 </p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="/admin/warta" class="nav-link ">
                                 <i class="nav-icon far fa-calendar-alt"></i>
@@ -233,7 +233,7 @@
     <script src="{{ asset('admin-lte/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
+    $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
     <script src="{{ asset('admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -251,13 +251,13 @@
     <script src="{{ asset('js/bootstrap-datetimepicker.min.js')}}"></script>
 
     <script>
-        jQuery(document).ready(function ($) {
-            /* now you can use $ */
-        });
-        $(".nav-link").on("click", function () {
-            $(".nav-link").find(".active").removeClass("active");
-            $(this).parent().addClass("active");
-        });
+    jQuery(document).ready(function($) {
+        /* now you can use $ */
+    });
+    $(".nav-link").on("click", function() {
+        $(".nav-link").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+    });
     </script>
 </body>
 

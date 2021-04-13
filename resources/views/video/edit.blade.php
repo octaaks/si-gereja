@@ -14,57 +14,57 @@
 
     <!-- Styles -->
     <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
+    html,
+    body {
+        background-color: #fff;
+        color: #636b6f;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 200;
+        height: 100vh;
+        margin: 0;
+    }
 
-        .full-height {
-            height: 100vh;
-        }
+    .full-height {
+        height: 100vh;
+    }
 
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
 
-        .position-ref {
-            position: relative;
-        }
+    .position-ref {
+        position: relative;
+    }
 
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
+    .top-right {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+    }
 
-        .content {
-            text-align: center;
-        }
+    .content {
+        text-align: center;
+    }
 
-        .title {
-            font-size: 84px;
-        }
+    .title {
+        font-size: 84px;
+    }
 
-        .links>a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
+    .links>a {
+        color: #636b6f;
+        padding: 0 25px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 
-        .m-b-md {
-            margin-bottom: 30px;
-        }
+    .m-b-md {
+        margin-bottom: 30px;
+    }
     </style>
 </head>
 
@@ -79,7 +79,7 @@
         <br><br>
         <div class="row">
             <div class="col-12">
-                <form action="/admin/warta/{{$data->id}}/update" method="post" enctype="multipart/form-data">
+                <form action="/admin/video/{{$data->id}}/update" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label for="title" class="col-md-1 col-form-label text-md-right">Judul</label>
@@ -97,12 +97,13 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="file" class="col-md-1 col-form-label text-md-right">File</label>
+                        <label for="file" class="col-md-1 col-form-label text-md-right">URL Video</label>
 
                         <div class="col-md-6">
-                            <input type="file" name="file" class="form-control">
+                            <input id="url" type="text" class="form-control @error('url') is-invalid @enderror"
+                                name="url" value="{{ $data->url }}" autofocus>
 
-                            @error('file')
+                            @error('url')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -112,7 +113,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-1">
-                            <input type="submit" class="btn btn-danger btn-danger" value="Upload">
+                            <input type="submit" class="btn btn-danger btn-danger" value="Simpan">
                         </div>
                     </div>
                 </form>

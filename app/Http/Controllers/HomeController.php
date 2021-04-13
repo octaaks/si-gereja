@@ -10,6 +10,8 @@ use App\Liturgi;
 use App\Warta;
 use Carbon\Carbon;
 
+use Illuminate\Support\Facades\Mail;
+
 class HomeController extends Controller
 {
     /**

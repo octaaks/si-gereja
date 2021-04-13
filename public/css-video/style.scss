@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;  
+  box-sizing:border-box;
+}
+$arvo:'Arvo';
+$primery_color:#4080fe;
+$dark_color:#4166ff; 
+$white:#fff;
+
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100vh;
+  position:relative;
+  background-color:#eee;
+  overflow:hidden;
+}
+.container{
+  max-width:1120px;
+  width:80%;
+  display:block;
+  margin:0 auto;
+  .row{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:30px;
+    .youtube_video{
+      width:60%;  
+      background-color:#000;    
+      position:relative;
+      padding-bottom:33.25%;
+      height:0;
+      iframe{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+      }
+    }
+    .details{
+      width:38%;
+      margin-left:2%;
+      padding-left:20px;
+      span{
+        font-size:25px;
+        font-family: sans-serif;
+      }
+      p{
+        font-size:35px;
+        font-family: $arvo;
+      }
+    }
+  }
+  .gallery{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .item{
+      width:calc(96% / 4);
+      position:relative;     
+      img{
+        width:100%;
+        display:block;
+      }
+      .youtube_icon{
+        width:100%;
+        height:100%;
+        display:flex;
+        background-color:rgba(0,0,0,.8);
+        position:absolute;
+        top:0;
+        left:0;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+        transition:all .3s ease-in-out;
+        &:hover{
+          background-color:rgba(0,0,0,.0);
+        }
+        &.active{
+          background-color:rgba(0,0,0,.0);
+          box-shadow:5px 5px 10px;
+          img{
+            opacity:0;
+          }
+        }
+        img{
+          width:50px;
+        }
+      }
+    }
+  }
+}

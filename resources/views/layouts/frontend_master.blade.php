@@ -27,18 +27,21 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/summernote/summernote-bs4.min.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <style type="text/css">
-        header {
-            background: rgba(255, 255, 255, 255);
-            clip-path: none;
-        }
 
-        .container {
-            max-width: 1152px;
-            padding: 0 15px;
-            margin: 0 auto;
-        }
+
+    <link rel="stylesheet" href="./css/style-home.css">
+
+    <style type="text/css">
+    header {
+        background: rgba(255, 255, 255, 255);
+        clip-path: none;
+    }
+
+    .container {
+        max-width: 1152px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
     </style>
 </head>
 <header>
@@ -47,7 +50,7 @@
             <nav id="main-nav" class="flex items-center justify-between">
                 <div class="left flex items-center">
                     <div class="branding">
-                    <a href="/"><img style="height:70px" src="./img/logo1.png" alt=""></a>
+                        <a href="/"><img style="height:70px" src="./img/logo1.png" alt=""></a>
                     </div>
                     <div class="left">
                         <a href="/warta">Warta Jemaat</a>
