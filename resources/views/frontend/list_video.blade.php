@@ -15,8 +15,8 @@
 <body>
     <div>
         <h3>Video Ibadah</h3>
-        <div class=" container">
-            <div class="flex items-center mt-2">
+        <div class="container">
+            <div class="mt-2">
                 <div class="youtube_video video-holder" id="video_holder">
                     <iframe width="100%" height="100%" id="video_id" src="" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
