@@ -2,7 +2,7 @@
 @section('title', 'Liturgi Ibadah')
 @section('content')
 
-<h3>Liturgi Ibadah</h3>
+<h3 class="section-heading mt-5"> <span>Liturgi </span>Ibadah</h3>
 <ul class="list-group mt-3">
     @foreach($liturgi as $item)
     <li class="list-group-item">

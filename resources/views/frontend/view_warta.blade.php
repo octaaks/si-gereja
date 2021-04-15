@@ -5,11 +5,7 @@
 <body>
     <div class="container ">
         <div class="container ">
-            <!-- <iframe src="https://docs.google.com/viewer?url={{$warta->filename}}&embedded=true"
-                style="width:70%; height:80%;" frameborder="0"></iframe> -->
-                <iframe
-                src="https://drive.google.com/viewerng/viewer?url=https://{{ asset('/') }}{{$warta->filename}}?pid=explorer&efh=false&a=v&chrome=false&embedded=true"
-                width="100%" height="600" frameborder="0" scrolling="yes" />
+        <iframe src="http://docs.google.com/gview?url={{ asset('/') }}{{$warta->filename}}&embedded=true" width="100%" height="600" frameborder="0" scrolling="yes" ></iframe>
         </div>
     </div>
 </body>

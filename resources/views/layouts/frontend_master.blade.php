@@ -66,6 +66,7 @@
                         </form> -->
                 </div>
             </nav>
+            
             @yield('content')
         </div>
     </div>
