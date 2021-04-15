@@ -45,6 +45,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware('role:admin')->get('admin/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::middleware('role:admin')->get('admin', 'HomeController@dashboard')->name('dashboard');
 Route::middleware('role:admin')->get('admin/week', 'HomeController@week')->name('week');
 
 Route::middleware('role:admin')->get('admin/jemaat', 'HomeController@jemaat')->name('jemaat');

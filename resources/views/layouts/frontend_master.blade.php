@@ -28,8 +28,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 
-
-    <link rel="stylesheet" href="./css/style-home.css">
+    <link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
+    <link rel="stylesheet" href="css-video/style.css">
 
     <style type="text/css">
     header {
@@ -50,7 +50,7 @@
             <nav id="main-nav" class="flex items-center justify-between">
                 <div class="left flex items-center">
                     <div class="branding">
-                        <a href="/"><img style="height:70px" src="./img/logo1.png" alt=""></a>
+                        <a href="/"><img style="height:70px" src="{{ asset('img/logo1.png') }}" alt=""></a>
                     </div>
                     <div class="left">
                         <a href="/warta">Warta Jemaat</a>

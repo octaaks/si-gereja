@@ -3,7 +3,7 @@
 @section('content')
 
 <h3>Warta Jemaat</h3>
-<ul class="list-group">
+<ul class="list-group mt-3">
     @foreach($warta as $item)
     <li class="list-group-item">
         <p>

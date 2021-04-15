@@ -118,7 +118,7 @@
 
             <div class="flex items-center justify-between">
                 @foreach($video as $item)
-                @if( $loop->first or $loop->iteration <= 3 ) <iframe width="320" height="180"
+                @if( $loop->first or $loop->iteration <= 2 ) <iframe width="512" height="320"
                     src="https://www.youtube.com/embed/{{$item->url}}" title="{{$item->title}}" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
