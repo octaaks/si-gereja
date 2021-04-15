@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <a href="#kontak" button class="btn btn-primary">Kontak</a>
+                        <a href="#kontak" button class="btn btn-primary">Hubungi Kami</a>
                         <!-- <form action="#kontak">
                                 <button class="btn btn-primary"> Kontak </button>
                         </form> -->
@@ -137,18 +137,18 @@
             <div class="card-wrapper">
                 <div class="card">
                     <img class="img-service" src="./image/icon-telp.png" alt="">
-                    <h1> Call Us On</h1>
-                    <h6> 0821-xxxx-xxxx</h6>
+                    <h1> Telepon</h1>
+                    <h6> (0532) 2071325</h6>
                 </div>
                 <div class="card">
                     <img class="img-service" src="./image/icon-email.png" alt="">
-                    <h1> Email Us At</h1>
+                    <h1> Email </h1>
                     <h6> gkehaleluya@gmail.com</h6>
                 </div>
                 <div class="card">
                     <img class="img-service" src="./image/icon-loc.png" alt="">
                     <h1> Visit Office</h1>
-                    <h6> Jl.GTM Yusuf Nanga Bulik, Kalimantan Tengah</h6>
+                    <h6> Jl. JEND. A. YANI NO. 137 RT. 10 A Nanga Bulik Kab. LAMANDAU</h6>
                 </div>
             </div>
 

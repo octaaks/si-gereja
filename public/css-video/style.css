@@ -97,7 +97,8 @@
 /*# sourceMappingURL=style.css.map */
 
 .video-holder{
-  display: none;
+  display: block;
+  max-height: 648px;
 }
 
 .item:hover {
