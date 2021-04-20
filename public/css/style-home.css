@@ -28,7 +28,7 @@ html {
 }
 
 header {
-    background: var(--dark);
+    background: #eeeeee;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
     /* height: 800px; */
 }
@@ -156,18 +156,15 @@ section.about .social a img {
     padding: 0.5rem;
 }
 
-
-
-
-
-
-
-
 /* jadwal ibadah */
 
-.img-service {
+/* .img-service {
     width: 100px;
     height: 100px;
+} */
+.img-service {
+    width: 42px;
+    height: 42px;
 }
 
 .section-heading {
@@ -184,12 +181,11 @@ section.about .social a img {
 .section-heading+p {
     color: var(--ternary);
     font-family: 'Lato', sans-serif;
-    margin-bottom: 8rem;
     text-align: center;
 }
 
 section.service {
-    background: var(--pure);
+    background-color: #eeeeee;
 }
 
 section.service .card-wrapper {
@@ -248,6 +244,9 @@ section.work {
 
 /* kontak */
 
+section.contact{
+    background-color: #eeeeee;
+}
 section.contact .card-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -478,12 +477,12 @@ footer .copyright {
 
 
 /* mobile version */
-
+/* 
 @media (max-width:1024px) {
     header #main-nav {
         display: none;
     }
-}
+} */
 
 .site-main-wrapper {
     position: relative;
@@ -539,3 +538,92 @@ footer .copyright {
     text-decoration: none;
     font-size: 2rem;
 }
+
+/* service */
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.service-11 {
+  font-family: "Montserrat", sans-serif;
+	color: #8d97ad;
+  font-weight: 300;
+}
+
+.service-11 h1, .service-11 h2, .service-11 h3, .service-11 h4, .service-11 h5, .service-11 h6 {
+  color: #3e4555;
+}
+
+.service-11 .font-weight-medium {
+	font-weight: 500;
+}
+
+.service-11 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.service-11 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.service-11 .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.service-11 .wrap-service11-box {
+  margin-top: 60px;
+}
+
+.service-11 .wrap-service11-box .icon-space {
+  margin: -70px 0 20px;
+}
+
+.service-11 .wrap-service11-box .icon-space .icon-round {
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.service-11 .bg-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-11 .icon-round {
+		width: 80px;
+    line-height: 80px;
+}
+
+.service-11 .btn-success-gradiant {
+		background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-11 .btn-success-gradiant:hover {
+		background: #1dc8cc;
+    background: -webkit-linear-gradient(legacy-direction(to right), #1dc8cc 0%, #2cdd9b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#1dc8cc), to(#2cdd9b));
+    background: -webkit-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: -o-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: linear-gradient(to right, #1dc8cc 0%, #2cdd9b 100%);	
+}
+
+.service-11 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+/* HOME PAGE VIDEO */
+
+.home-video {
+    /* width: calc(96% / 2);
+    height: calc(96% / 2); */
+    width: 320px;
+    height: 180px;
+  }

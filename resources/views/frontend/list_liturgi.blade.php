@@ -2,18 +2,20 @@
 @section('title', 'Liturgi Ibadah')
 @section('content')
 
-<h3>Liturgi Ibadah</h3>
-<ul class="list-group mt-3">
-    @foreach($liturgi as $item)
-    <li class="list-group-item">
-        <p>
-            <a href="liturgi/view/{{$item->id}}">
-                {{$item->title}}</a>
-        </p>
-        tgl
-    </li>
-    @endforeach
-</ul>
-{{$liturgi->links()}}
+<div class="container">
+    <h4>Liturgi Ibadah</h4>
+    <ul class="list-group mt-3">
+        @foreach($liturgi as $item)
+        <li class="list-group-item">
+            <p>
+                <a href="liturgi/view/{{$item->id}}">
+                    {{$item->title}}</a>
+            </p>
+            tgl
+        </li>
+        @endforeach
+    </ul>
+    {{$liturgi->links()}}
 
+</div>
 @endsection

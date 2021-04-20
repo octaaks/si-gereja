@@ -2,13 +2,13 @@
 @section('title', 'Warta')
 @section('content')
 
-<body>
-    <div class="container ">
-        <div class="container ">
-            <iframe src="https://docs.google.com/viewer?url={{$warta->filename}}&embedded=true"
-                style="width:70%; height:80%;" frameborder="0"></iframe>
-        </div>
+<div class="container">
+    <h4>{{$warta->title}}</h4>
+    <div class="d-flex justify-content-center">
+
+        <iframe class="mt-3" src="https://docs.google.com/viewer?url={{$warta->filename}}&embedded=true"
+            style="width:95%; height:80%;" frameborder="0"></iframe>
     </div>
-</body>
+</div>
 
 @endsection
