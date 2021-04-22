@@ -341,7 +341,7 @@ section.contact .btn-wrapper {
 footer {
     background: var(--dark);
     text-align: center;
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 footer .footer-logo {
@@ -354,7 +354,7 @@ footer .footer-socials a {
 }
 
 footer .footer-socials {
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
     margin-right: -1rem;
 }
 
@@ -670,3 +670,40 @@ footer .copyright {
     width: 320px;
     height: 180px;
 }
+
+/* FOOTER SOCIAL */
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  /* youtube */
+  .fa-youtube {
+    background: #e43737;
+    color: white;
+    border-radius: 5px;
+  }

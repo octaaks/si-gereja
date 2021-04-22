@@ -14,6 +14,7 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="./css/style-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 </head>
 
@@ -37,7 +38,7 @@
                                 <a class="nav-item nav-link" href="/liturgi">Liturgi</a>
                                 <a class="nav-item nav-link" href="/renungan">Renungan</a>
                                 <a class="nav-item nav-link" href="/video">Video</a>
-                      <a href="#kontak" button class="btn btn-primary">Kontak</a>
+                                <a href="#kontak" button class="btn btn-primary">Kontak</a>
                             </div>
                         </div>
                     </div>
@@ -139,15 +140,14 @@
 
             <div class="row">
                 @foreach($video as $item)
-                @if( $loop->first or $loop->iteration <= 3 ) 
-                <div class="col-lg-4 d-flex justify-content-center mt-1">
+                @if( $loop->first or $loop->iteration <= 3 ) <div class="col-lg-4 d-flex justify-content-center mt-1">
                     <iframe class="home-video" src="https://www.youtube.com/embed/{{$item->url}}"
                         title="{{$item->title}}" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                </div>
-                @endif
-                @endforeach
+            </div>
+            @endif
+            @endforeach
         </div>
         </div>
     </section>
@@ -245,16 +245,32 @@
     <!-- footer -->
 
     <footer>
-        <img style="height:70px" class="footer-logo" src="./img/logo.png" alt="">
-        <!-- <div class="footer-socials">
-            <a href="#"><img src="./image/website.svg" alt=""></a>
-            <a href="#"><img src="./image/facebook.svg" alt=""></a>
-            <a href="#"><img src="./image/twitter.svg" alt=""></a>
-            <a href="#"><img src="./image/pintrest.svg" alt=""></a>
-            <a href="#"><img src="./image/instagram.svg" alt=""></a>
-        </div> -->
-        <div class="copyright">
-            Copyright 2021 "©" Bang Jago. All Right Reserved.
+        <!-- <div class="row"> -->
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="90%" height="300px" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=GKE%20haleluya%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                    href="https://www.whatismyip-address.com/divi-discount/"></a><br>
+                <style>
+                .mapouter {
+                    position: relative;
+                    text-align: center;
+                }
+                </style><a href="https://www.embedgooglemap.net">responsive google maps</a>
+                <style>
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 300px;
+                }
+                </style>
+            </div>
+        </div>
+        <!-- </div> -->
+
+        <div class="footer-socials mt-5">
+            <a href="https://www.facebook.com/jemaatgke.nangabulik/" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA" class="fa fa-youtube"></a>
         </div>
     </footer>
 
@@ -267,7 +283,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-
 </body>
+
+<div style="background:#ffffff; padding:20px; text-align:center;">
+
+    <img style="height:40px; margin-right:20px" src="./img/logo.png" alt="">Copyright 2021 "©" Bang
+    Jago. All Right Reserved.
+</div>
 
 </html>
