@@ -11,7 +11,6 @@
                 <a href="liturgi/view/{{$item->id}}">
                     {{$item->title}}</a>
             </p>
-            tgl
         </li>
         @endforeach
     </ul>
