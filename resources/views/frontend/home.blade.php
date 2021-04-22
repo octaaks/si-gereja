@@ -46,7 +46,7 @@
                 <!-- Akhir Navbar -->
                 <div class="hero flex items-center justify-between">
                     <div class="left flex-1 flex justify-center">
-                        <div style="height:512px">
+                        <div style="height:800px">
                             <!-- <img src="./image/man.png" alt=""> -->
                         </div>
                     </div>
