@@ -13,6 +13,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     /* height: 6000px; */
 }
 
@@ -28,7 +29,7 @@ html {
 }
 
 header {
-    background: var(--dark);
+    background: #eeeeee;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
     /* height: 800px; */
 }
@@ -73,28 +74,28 @@ header nav .branding {
 
 .hero .right {
     color: var(--pure);
-    
-    
+
+
 }
 
 .hero .right h6 {
     font-size: 1.6rem;
     color: var(--primary);
     margin-bottom: 0.5rem;
-    
+
 }
 
 .hero .right h1 {
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: 450;
     line-height: 1.2;
     margin-bottom: 2rem;
-    
+
 }
 
 .hero .right h1 span {
     color: var(--primary);
-    
+
 }
 
 .hero .right p {
@@ -104,7 +105,7 @@ header nav .branding {
 
 .hero .right {
     margin-top: -7rem;
-    
+
 }
 
 /* tinggi halaman */
@@ -166,18 +167,15 @@ section.about .social a img {
     padding: 0.5rem;
 }
 
-
-
-
-
-
-
-
 /* jadwal ibadah */
 
-.img-service {
+/* .img-service {
     width: 100px;
     height: 100px;
+} */
+.img-service {
+    width: 42px;
+    height: 42px;
 }
 
 .section-heading {
@@ -193,13 +191,13 @@ section.about .social a img {
 
 .section-heading+p {
     color: var(--ternary);
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     text-align: center;
 }
 
 section.service {
-    background: var(--pure);
+    background-color: #ffffff;
 }
 
 section.service .card-wrapper {
@@ -232,7 +230,7 @@ section.service .card-wrapper .card h2 {
 }
 
 section.service .card-wrapper .card p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--ternary);
     line-height: 1.5;
 }
@@ -249,14 +247,14 @@ section.service .card-wrapper .card:hover p {
 /* video */
 
 section.work {
-    background: var(--light);
+    background-color: #eeeeee;
 }
 
-
-
-
-
 /* kontak */
+
+section.contact {
+    background-color: #ffffff;
+}
 
 section.contact .card-wrapper {
     display: grid;
@@ -320,7 +318,7 @@ section.contact input:focus {
 section.contact .btn-wrapper {
     text-align: center;
     margin-top: 2rem;
-    
+
 }
 
 footer {
@@ -489,12 +487,12 @@ footer .copyright {
 
 
 /* mobile version */
-
+/* 
 @media (max-width:1024px) {
     header #main-nav {
         display: none;
     }
-}
+} */
 
 .site-main-wrapper {
     position: relative;
@@ -549,4 +547,109 @@ footer .copyright {
     color: var(--secondary);
     text-decoration: none;
     font-size: 2rem;
+}
+
+.service-11 {
+    font-family: 'Poppins', sans-serif;
+    color: #8d97ad;
+    font-weight: 500;
+}
+
+.service-11 h1,
+.service-11 h2,
+.service-11 h3,
+.service-11 h4,
+.service-11 h5,
+.service-11 h6 {
+    color: #3e4555;
+}
+
+.service-11 .font-weight-medium {
+    font-weight: 500;
+}
+
+.service-11 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.service-11 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.service-11 .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    text-align: center;
+}
+.service-11 .card:hover{
+    background-color: #b2eef0;
+    /* color: var(--primary); */
+}
+
+.service-11 .wrap-service11-box {
+    margin-top: 60px;
+}
+
+.service-11 .wrap-service11-box .icon-space {
+    margin: -70px 0 20px;
+}
+
+.icon-space {
+    text-align: center;
+}
+
+.icon-space :hover{
+    text-align: center;
+}
+
+.service-11 .wrap-service11-box .icon-space .icon-round {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.service-11 .bg-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-11 .icon-round {
+    width: 80px;
+    line-height: 80px;
+}
+
+.service-11 .btn-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-11 .btn-success-gradiant:hover {
+    background: #1dc8cc;
+    background: -webkit-linear-gradient(legacy-direction(to right), #1dc8cc 0%, #2cdd9b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#1dc8cc), to(#2cdd9b));
+    background: -webkit-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: -o-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: linear-gradient(to right, #1dc8cc 0%, #2cdd9b 100%);
+}
+
+.service-11 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+/* HOME PAGE VIDEO */
+
+.home-video {
+    /* width: calc(96% / 2);
+    height: calc(96% / 2); */
+    width: 320px;
+    height: 180px;
 }
