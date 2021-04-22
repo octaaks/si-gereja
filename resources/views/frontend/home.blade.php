@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gereja</title>
-    <link rel="stylesheet" href="./css/style-home.css">
+    <link rel="stylesheet" href="/css-home/style-main.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="./css/style-nav.css">
+    <link rel="stylesheet" href="/css-home/style-nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/jpg" href="/favicon.jpg" />
 </head>
 
 <body>
@@ -45,21 +47,22 @@
                 </nav>
 
                 <!-- Akhir Navbar -->
-                <div class="hero flex items-center justify-between">
-                    <div class="left flex-1 flex justify-center">
-                        <div style="height:800px">
-                            <!-- <img src="./image/man.png" alt=""> -->
+                <div class="hero flex items-center justify-between row">
+                    <div class="col-md-6 left flex-1 flex justify-center">
+                        <div class="filler">
                         </div>
                     </div>
-                    <div class="right flex-1">
-                        <!-- <h6>Joe Ackerman</h6> -->
-                        <h1>Amsal <span> 19:21 </span> </h1>
-                        <p>Banyaklah rancangan di hati manusia, tetapi keputusan TUHANlah yang terlaksana.</p>
-                        <div>
-                            <!-- <button class="btn btn-secondary">LIVE STREAMING</button> -->
-                            <form action="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA">
-                                <button class="btn btn-primary">LIVE STREAMING</button>
-                            </form>
+                    <div class="col-md-6 right flex-1 flex justify-center">
+                        <div style="">
+                            <h1 style="text-shadow: 0px 0px 15px #5555ff;">Amsal <span> 19:21 </span> </h1>
+                            <p style="text-shadow: 1px 1px 2px #010101;">Banyaklah rancangan di hati manusia, tetapi
+                                keputusan TUHANlah yang terlaksana.</p>
+                            <div>
+                                <!-- <button class=" btn btn-secondary">LIVE STREAMING</button> -->
+                                <form action="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA">
+                                    <button class="btn btn-primary">LIVE STREAMING</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

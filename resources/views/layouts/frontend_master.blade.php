@@ -28,7 +28,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/style-main.css') }}">
     <link rel="stylesheet" href="{{ asset('css-video/style.css') }}">
 
     <!-- Bootstrap CSS -->
@@ -39,7 +39,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style-nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/style-nav.css') }}">
+    <link rel="icon" type="image/jpg" href="/favicon.jpg" />
 
     <style type="text/css">
     header {

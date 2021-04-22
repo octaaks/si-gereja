@@ -17,15 +17,28 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
 
     <!-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/weekpicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/bootstrap-datetimepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/weekpicker.css') }}">
 
 </head>
-<div class="container">
-    Warga yang berulang tahun pada {{$tgl}}
-    <div class="input-group" id="DateDemo">
-        <input type='text' autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id='weeklyDatePicker' placeholder="Select Week" />
-        <button id='weekBtn'>Tampilkan</button>
+<div class="card">
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-8">
+                <p>Menampilkan warga yang berulang tahun pada: <b> {{$tgl}} </b></p>
+                <p></p>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group" id="DateDemo">
+                    <input class="form-control" type='text' autocomplete="off" autocorrect="off" autocapitalize="off"
+                        spellcheck="false" id='weeklyDatePicker' placeholder="Pilih tanggal" />
+                    <div class="input-group-append">
+                        <button class="btn btn-info" id='weekBtn'>Tampilkan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -107,54 +120,55 @@
 <!-- <script src="{{ asset('daterangepicker/newpicker.js') }}"></script> -->
 <!-- Page specific script -->
 <script>
-    $(document).ready(function () {});
-    $(document).ready(function () {
-        moment.locale('en', {
-            week: {
-                dow: 1
-            } // Monday is the first day of the week
-        });
-
-        //Initialize the datePicker(I have taken format as mm-dd-yyyy, you can     //have your owh)
-        $("#weeklyDatePicker").datetimepicker({
-            format: 'DD-MM-YYYY'
-        });
-
-        //Get the value of Start and End of Week
-        $('#weeklyDatePicker').on('dp.change', function (e) {
-            var value = $("#weeklyDatePicker").val();
-            var firstDate = moment(value, "DD-MM-YYYY").day(1).format("DD-MM-YYYY");
-            var lastDate = moment(value, "DD-MM-YYYY").day(7).format("DD-MM-YYYY");
-            $("#weeklyDatePicker").val(firstDate + " - " + lastDate);
-
-            $('#weekBtn').click(function () {
-                window.location = 'http://localhost:8000/week?range=' + firstDate + " - " + lastDate;
-            });
-        });
-
-
+$(document).ready(function() {});
+$(document).ready(function() {
+    moment.locale('en', {
+        week: {
+            dow: 1
+        } // Monday is the first day of the week
     });
 
-    jQuery(document).ready(function ($) {
-        /* now you can use $ */
-
-        $("#tb1").DataTable({
-            // "ajax": 'http://localhost:8000/api/week?range=' + moment().format("YYYY-MM-DD") + ' - ' + moment().format("YYYY-MM-DD"),
-            "searching": false,
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": true,
-            "buttons": ["excel", "pdf"]
-        }).buttons().container().appendTo('#tb1_wrapper .col-md-6:eq(0)');
-
-        $("#tb2").DataTable({
-            "searching": false,
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": true,
-            "buttons": ["excel", "pdf"]
-        }).buttons().container().appendTo('#tb2_wrapper .col-md-6:eq(0)');
+    //Initialize the datePicker(I have taken format as mm-dd-yyyy, you can     //have your owh)
+    $("#weeklyDatePicker").datetimepicker({
+        format: 'DD-MM-YYYY'
     });
+
+    //Get the value of Start and End of Week
+    $('#weeklyDatePicker').on('dp.change', function(e) {
+        var value = $("#weeklyDatePicker").val();
+        var firstDate = moment(value, "DD-MM-YYYY").day(1).format("DD-MM-YYYY");
+        var lastDate = moment(value, "DD-MM-YYYY").day(7).format("DD-MM-YYYY");
+        $("#weeklyDatePicker").val(firstDate + " - " + lastDate);
+
+        $('#weekBtn').click(function() {
+            window.location = 'http://localhost:8000/admin/week?range=' + firstDate + " - " +
+                lastDate;
+        });
+    });
+
+
+});
+
+jQuery(document).ready(function($) {
+    /* now you can use $ */
+
+    $("#tb1").DataTable({
+        // "ajax": 'http://localhost:8000/api/week?range=' + moment().format("YYYY-MM-DD") + ' - ' + moment().format("YYYY-MM-DD"),
+        "searching": false,
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": true,
+        "buttons": ["excel", "pdf"]
+    }).buttons().container().appendTo('#tb1_wrapper .col-md-6:eq(0)');
+
+    $("#tb2").DataTable({
+        "searching": false,
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": true,
+        "buttons": ["excel", "pdf"]
+    }).buttons().container().appendTo('#tb2_wrapper .col-md-6:eq(0)');
+});
 </script>
 
 @endsection

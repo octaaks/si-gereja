@@ -40,6 +40,7 @@ header {
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
 }
+
 h1 {
     display: block;
     font-size: 2em;
@@ -90,8 +91,7 @@ header nav .branding {
 
 .hero .right {
     color: var(--pure);
-
-
+    vertical-align: middle;
 }
 
 .hero .right h6 {
@@ -126,7 +126,7 @@ header nav .branding {
 
 /* tinggi halaman */
 section {
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 /* about */
@@ -210,7 +210,7 @@ section.about .social a img {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     text-align: center;
-    
+
 }
 
 section.service {
@@ -226,16 +226,13 @@ section.service .card-wrapper {
 
 section.service .card-wrapper .card {
     background: var(--pure);
-    padding: 3rem 2rem;
     position: relative;
-    padding-top: 5rem;
     text-align: center;
     transition: all .3s ease;
 }
 
 section.service .card-wrapper .card img {
     position: absolute;
-    top: -3.5rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -243,7 +240,6 @@ section.service .card-wrapper .card img {
 section.service .card-wrapper .card h2 {
     font-weight: 400;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
 }
 
 section.service .card-wrapper .card p {
@@ -599,7 +595,8 @@ footer .copyright {
     box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
     text-align: center;
 }
-.service-11 .card:hover{
+
+.service-11 .card:hover {
     background-color: #b2eef0;
     /* color: var(--primary); */
 }
@@ -616,7 +613,7 @@ footer .copyright {
     text-align: center;
 }
 
-.icon-space :hover{
+.icon-space :hover {
     text-align: center;
 }
 
@@ -679,31 +676,41 @@ footer .copyright {
     width: 50px;
     text-align: center;
     text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
     opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
     background: #3B5998;
     color: white;
     border-radius: 5px;
-  }
-  
-  /* Twitter */
-  .fa-twitter {
+}
+
+/* Twitter */
+.fa-twitter {
     background: #55ACEE;
     color: white;
-  }
+}
 
-  /* youtube */
-  .fa-youtube {
+/* youtube */
+.fa-youtube {
     background: #e43737;
     color: white;
     border-radius: 5px;
-  }
+}
+
+.filler {
+    height: 512px;
+}
+
+@media (min-height: 768px) {
+    .filler {
+        height: 700px;
+    }
+}

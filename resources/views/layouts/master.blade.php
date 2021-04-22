@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/summernote/summernote-bs4.min.css') }}">
+    <link rel="icon" type="image/jpg" href="/favicon.jpg" />
 
 </head>
 
@@ -119,7 +120,7 @@
                         <!-- <li class="nav-header">MENU</li> -->
                         <li class="nav-item">
                             <a href="/admin/dashboard" class="nav-link active">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fas fa-tachometer-alt" aria-hidden="true"></i>
                                 <p>
                                     Dashboard
                                     <!-- <span class="badge badge-info right">2</span> -->
@@ -129,7 +130,7 @@
                         <!-- <li class="nav-header">Data Warga Gereja</li> -->
                         <li class="nav-item">
                             <a href="/admin/jemaat" class="nav-link ">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fas fa-user-friends"></i>
                                 <p>
                                     Data Jemaat
                                     <!-- <span class="badge badge-info right">2</span> -->
@@ -139,7 +140,7 @@
 
                         <li class="nav-item">
                             <a href="/admin/pernikahan" class="nav-link ">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fas fa-birthday-cake"></i>
                                 <p>
                                     Data Pernikahan
                                     <!-- <span class="badge badge-info right">2</span> -->
@@ -149,7 +150,7 @@
 
                         <li class="nav-item">
                             <a href="/admin/liturgi" class="nav-link ">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fas fa-scroll"></i>
                                 <p>
                                     Liturgi Ibadah
                                     <!-- <span class="badge badge-info right">2</span> -->
@@ -159,7 +160,7 @@
 
                         <li class="nav-item">
                             <a href="/admin/warta" class="nav-link ">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fas fa-bullhorn"></i>
                                 <p>
                                     Warta Gereja
                                     <!-- <span class="badge badge-info right">2</span> -->
@@ -169,7 +170,7 @@
 
                         <li class="nav-item">
                             <a href="/admin/video" class="nav-link ">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fab fa-youtube"></i></i>
                                 <p>
                                     Video
                                     <!-- <span class="badge badge-info right">2</span> -->

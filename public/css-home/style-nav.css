@@ -9,6 +9,31 @@
 
 }
 
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease;
+    border-radius: .5px;
+}
+
+.btn-primary{
+    background: var(--primary);
+    color: var(--secondary);
+    background-color:var(--primary);
+}
+
+.btn-primary:hover{
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    
+}
+
 /* Navbar */
 .navbar {
     position: relative;
@@ -206,28 +231,4 @@
         font-size: 32px;
     }
 
-    .btn {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        font-weight: 600;
-        border: 2px solid transparent;
-        outline: none;
-        cursor: pointer;
-        text-transform: uppercase;
-        transition: .3s ease;
-        border-radius: .5px;
-    }
-
-    .btn-primary{
-        background: var(--primary);
-        color: var(--secondary);
-        background-color:var(--primary);
-    }
-    
-    .btn-primary:hover{
-        background: transparent;
-        border-color: var(--primary);
-        color: var(--primary);
-        
-    }
 }
