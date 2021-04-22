@@ -71,7 +71,7 @@ class FrontendController extends Controller
              
             ], function ($mail) use ($request) {
                 $mail->from(env('MAIL_FROM_ADDRESS'), $request->name);
-                $mail->to("octa.aks@gmail.com")->subject($request->subject);
+                $mail->to("freakstrngr@gmail.com")->subject($request->subject);
             });
 
         // Cek kegagalan

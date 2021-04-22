@@ -51,6 +51,10 @@ header nav .left a:hover {
     color: var(--primary);
 }
 
+header nav .right a {
+    text-transform: uppercase;
+}
+
 header nav {
     padding: 2rem 0;
 }
@@ -68,13 +72,16 @@ header nav .branding {
 }
 
 .hero .right {
-    color: var(--pure)
+    color: var(--pure);
+    
+    
 }
 
 .hero .right h6 {
     font-size: 1.6rem;
     color: var(--primary);
     margin-bottom: 0.5rem;
+    
 }
 
 .hero .right h1 {
@@ -82,10 +89,12 @@ header nav .branding {
     font-weight: 100;
     line-height: 1.2;
     margin-bottom: 2rem;
+    
 }
 
 .hero .right h1 span {
     color: var(--primary);
+    
 }
 
 .hero .right p {
@@ -95,6 +104,7 @@ header nav .branding {
 
 .hero .right {
     margin-top: -7rem;
+    
 }
 
 /* tinggi halaman */
@@ -310,6 +320,7 @@ section.contact input:focus {
 section.contact .btn-wrapper {
     text-align: center;
     margin-top: 2rem;
+    
 }
 
 footer {
