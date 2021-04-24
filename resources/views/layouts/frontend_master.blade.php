@@ -28,8 +28,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css-home/style-main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css-video/style.css') }}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -40,6 +38,8 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="{{ asset('css-home/style-nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/style-main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-video/style.css') }}">
     <link rel="icon" type="image/jpg" href="/favicon.jpg" />
 
     <style type="text/css">
@@ -93,5 +93,4 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
 </body>
-
 @extends('layouts/footer')

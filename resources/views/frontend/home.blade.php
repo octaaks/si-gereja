@@ -247,7 +247,7 @@
 
     <!-- footer -->
 
-    <footer>
+    <div class="footer-home">
         <!-- <div class="row"> -->
         <div class="mapouter">
             <div class="gmap_canvas"><iframe width="90%" height="300px" id="gmap_canvas"
@@ -275,7 +275,7 @@
             <a href="https://www.facebook.com/jemaatgke.nangabulik/" class="fa fa-facebook"></a>
             <a href="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA" class="fa fa-youtube"></a>
         </div>
-    </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

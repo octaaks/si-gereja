@@ -1,5 +1,7 @@
-<div class="mt-3" style="background:#ffffff; padding:20px; text-align:center;">
-
-    <img style="height:40px; margin-right:20px" src="/img/logo.png" alt="">Copyright 2021 "©" Joeee. All Right
+<footer class="main-footer mt-5">
+    <!-- <div class="second-footer mt-3"> -->
+    <!-- <img style="height:30px; margin-right:20px" src="/img/logo.png" alt=""> -->
+    Copyright 2021 "©" Joeee. All Right
     Reserved.
-</div>
+    <!-- </div> -->
+</footer>

@@ -17,11 +17,6 @@ body {
     /* height: 6000px; */
 }
 
-.date-text{
-    font-size: 0.8rem;
-    font-weight: 200;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -60,6 +55,11 @@ h1 {
     max-width: 1152px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.date-text {
+    font-size: 0.8rem;
+    font-weight: 200;
 }
 
 header nav .left a {
@@ -339,7 +339,7 @@ section.contact .btn-wrapper {
 
 }
 
-footer {
+.footer-home {
     background: var(--dark);
     text-align: center;
     padding: 3rem 0;
@@ -719,3 +719,24 @@ footer .copyright {
         height: 700px;
     }
 }
+
+@media (min-width: 0px) {
+    body:not(.sidebar-mini-md) .main-footer {
+        margin-left: 0px;
+        position: absolute;
+        right: 0;bottom:0;left:0;
+        text-align: center;
+    }
+}
+
+
+.second-footer {
+    display: block;
+    border-top: 1px solid #b3b4b6;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background: #ffffff;
+    padding: 10px;
+}
+
