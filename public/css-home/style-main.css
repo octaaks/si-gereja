@@ -17,6 +17,11 @@ body {
     /* height: 6000px; */
 }
 
+.date-text{
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -346,12 +351,12 @@ footer .footer-logo {
 }
 
 footer .footer-socials a {
-    margin-right: 1rem;
+    margin-right: 0rem;
 }
 
 footer .footer-socials {
     margin-bottom: 0rem;
-    margin-right: -1rem;
+    margin-right: 0rem;
 }
 
 footer .copyright {

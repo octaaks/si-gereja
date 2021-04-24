@@ -30,9 +30,14 @@
                 <div class="youtube_icon">
                     <img src="image/youtube.svg">
                 </div>
+                <div class="video-title">
+                    {{$item->title}}
+                </div>
+                <div class="video-date">
+                    {{$item->created_at->diffForHumans()}}
+                </div>
             </a>
             @endforeach
-            {{$video->links()}}
         </div>
     </div>
 

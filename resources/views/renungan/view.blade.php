@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Video Ibadah')
+@section('title', 'Preview Bacaan Renungan')
 @section('content')
 
 <head>
@@ -92,41 +92,18 @@
         {{session('error')}}
     </div>
     @endif
+
     <div class="card">
         <!-- /.card-header -->
-        <div class="card-body">
-            <div style="margin:10px" class="row">
-                <div class="col-md-auto">
-                    <a href="{{ route("create_video") }}" class="btn btn-primary btn-md" role="button"
-                        aria-disabled="true">Tambahkan Video Ibadah</a>
-                </div>
-            </div>
+        <div class="card-header">
 
-            <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Judul</th>
-                        <th>File</th>
-                        <th>Opsi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($data as $index => $item)
-                    <tr>
-                        <td>{{ $index +1 }}</td>
-                        <td>{{ $item-> title}}</td>
-                        <td>{{ $item-> url}}</td>
-                        <td width="20%">
-                            <a class="btn btn-primary  btn-sm" href="/admin/video/{{$item->id}}/edit/"
-                                role="button">Edit</a>
-                            <a class="btn btn-danger  btn-sm" method="delete" href="/admin/video/{{$item->id}}/delete"
-                                role="button">Delete</a>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+            <div class="text-center">
+                <h3><b>{{$data->title}}</b></h3>
+                <h6>{{$data->verse}}</h6>
+            </div>
+        </div>
+        <div class="card-body text-left">
+            {{$data->content}}
         </div>
         <!-- /.card-body -->
     </div>
@@ -150,15 +127,4 @@
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 <!-- Page specific script -->
-<script>
-jQuery(document).ready(function($) {
-    /* now you can use $ */
-    $("#example1").DataTable({
-        "responsive": true,
-        "lengthChange": false,
-        "autoWidth": false,
-
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-});
-</script>
 @endsection

@@ -169,6 +169,16 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="/admin/renungan" class="nav-link ">
+                                <i class="nav-icon fas fa-bible"></i>
+                                <p>
+                                    Renungan
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="/admin/video" class="nav-link ">
                                 <i class="nav-icon fab fa-youtube"></i></i>
                                 <p>
@@ -216,7 +226,7 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
+        <footer class="main-footer mt-5">
             <strong>Copyright &copy; 2021 <a href="/">GKE Haleluya Nanga Bulik</a>.</strong>
         </footer>
 
