@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Edit Warta')
+@section('title', 'Edit Renungan')
 @section('content')
 
 <head>
@@ -73,6 +73,11 @@
     @if(session('success'))
     <div class="alert alert-success" role="alert">
         {{session('success')}}
+    </div>
+    @endif
+    @if(session('error'))
+    <div class="alert alert-danger" role="alert">
+        {{session('error')}}
     </div>
     @endif
     <div class="container">

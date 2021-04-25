@@ -13,7 +13,8 @@ class PernikahanSeeder extends Seeder
     public function run()
     {
         Pernikahan::truncate();
-        $json = json_decode(file_get_contents('http://localhost:8000/json/pernikahan.json'));
+        // $json = json_decode(file_get_contents('http://localhost:8000/json/pernikahan.json'));
+        $json = json_decode(file_get_contents('http://localhost/si-gereja/public/json/pernikahan.json'));
         
         foreach ($json as $j) {
             Pernikahan::create(array(

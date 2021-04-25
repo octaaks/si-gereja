@@ -79,8 +79,8 @@
 
 .gallery .item .youtube_icon.active {
     background-color: rgba(0, 0, 0, 0);
-    -webkit-box-shadow: 5px 5px 10px;
-    box-shadow: 5px 5px 10px;
+    -webkit-box-shadow: 0px 0px 2px;
+    box-shadow: 0px 0px 2px;
 }
 
 .gallery .item .youtube_icon.active img {
@@ -106,6 +106,17 @@
     transform: scale(1.05);
 }
 
+.video-title {
+    color: #000;
+    font-size: 1em;
+    pointer-events: none
+}
+
+.video-date {
+    color: #000;
+    font-size: .75em;
+    pointer-events: none
+}
 
 @media (max-width: 1024px) {
     .video-holder {
@@ -126,6 +137,7 @@
         display: block;
         max-height: 200px;
     }
+
     .gallery {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -137,10 +149,12 @@
         -ms-flex-align: center;
         align-items: center;
     }
+
     .gallery .item {
         width: calc(96%/2);
         position: relative;
     }
+
     .container .gallery .item .youtube_icon img {
         width: 25px;
     }

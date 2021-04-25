@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Video Ibadah')
+@section('title', 'Bacaan Renungan')
 @section('content')
 
 <head>
@@ -92,13 +92,14 @@
         {{session('error')}}
     </div>
     @endif
+
     <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
             <div style="margin:10px" class="row">
                 <div class="col-md-auto">
-                    <a href="{{ route("create_video") }}" class="btn btn-primary btn-md" role="button"
-                        aria-disabled="true">Tambahkan Video Ibadah</a>
+                    <a href="renungan/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Tulis
+                        Renungan</a>
                 </div>
             </div>
 
@@ -107,7 +108,7 @@
                     <tr>
                         <th>No</th>
                         <th>Judul</th>
-                        <th>File</th>
+                        <th>Bacaan</th>
                         <th>Opsi</th>
                     </tr>
                 </thead>
@@ -116,12 +117,14 @@
                     <tr>
                         <td>{{ $index +1 }}</td>
                         <td>{{ $item-> title}}</td>
-                        <td>{{ $item-> url}}</td>
+                        <td>{{ $item-> verse}}</td>
                         <td width="20%">
-                            <a class="btn btn-primary  btn-sm" href="/admin/video/{{$item->id}}/edit/"
+                            <a class="btn btn-success  btn-sm" href="/admin/renungan/{{$item->id}}/view/"
+                                role="button">Lihat</a>
+                            <a class="btn btn-primary  btn-sm" href="/admin/renungan/{{$item->id}}/edit/"
                                 role="button">Edit</a>
-                            <a class="btn btn-danger  btn-sm" method="delete" href="/admin/video/{{$item->id}}/delete"
-                                role="button">Delete</a>
+                            <!-- <a class="btn btn-danger  btn-sm" method="delete" href="/admin/renungan/{{$item->id}}/delete"
+                                role="button">Delete</a> -->
                         </td>
                     </tr>
                     @endforeach

@@ -29,6 +29,9 @@ Route::get('/', 'FrontendController@index');
 Route::get('/warta', 'FrontendController@listWarta');
 Route::get('/warta/view/{id}', 'FrontendController@viewWarta');
 
+Route::get('/renungan', 'FrontendController@listRenungan');
+Route::get('/renungan/view/{id}', 'FrontendController@viewRenungan');
+
 Route::get('/liturgi', 'FrontendController@listLiturgi');
 Route::get('/liturgi/view/{id}', 'FrontendController@viewLiturgi');
 
@@ -65,6 +68,14 @@ Route::middleware('role:admin')->get('admin/warta/create', 'WartaController@crea
 Route::middleware('role:admin')->post('admin/warta/{id}/update', 'WartaController@update')->name('update_warta');
 Route::middleware('role:admin')->post('admin/warta/store', 'WartaController@store')->name('store_warta');
 Route::middleware('role:admin')->get('admin/warta/{id}/delete', 'WartaController@destroy')->name('delete_warta');
+
+Route::middleware('role:admin')->get('admin/renungan', 'RenunganController@index')->name('renungan');
+Route::middleware('role:admin')->get('admin/renungan/{id}/view', 'RenunganController@show')->name('view_renungan');
+Route::middleware('role:admin')->get('admin/renungan/{id}/edit', 'RenunganController@edit')->name('edit_renungan');
+Route::middleware('role:admin')->get('admin/renungan/create', 'RenunganController@create')->name('create_renungan');
+Route::middleware('role:admin')->post('admin/renungan/{id}/update', 'RenunganController@update')->name('update_renungan');
+Route::middleware('role:admin')->post('admin/renungan/store', 'RenunganController@store')->name('store_renungan');
+Route::middleware('role:admin')->get('admin/renungan/{id}/delete', 'RenunganController@destroy')->name('delete_renungan');
 
 Route::middleware('role:admin')->get('admin/video', 'VideoController@index')->name('video');
 Route::middleware('role:admin')->get('admin/video/{id}/edit', 'VideoController@edit')->name('edit_video');

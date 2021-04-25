@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Tambah Video Ibadah')
+@section('title', 'Edit Liturgi')
 @section('content')
 
 <head>
@@ -70,7 +70,7 @@
 
 <body>
 
-@if(session('success'))
+    @if(session('success'))
     <div class="alert alert-success" role="alert">
         {{session('success')}}
     </div>
@@ -84,14 +84,14 @@
         <br><br>
         <div class="row">
             <div class="col-12">
-                <form action="{{ route("store_video") }}" method="post" enctype="multipart/form-data">
+                <form action="/admin/renungan/{{$data->id}}/update" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label for="title" class="col-md-2 col-form-label text-md-right">Judul</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
-                                name="title" value="" autofocus>
+                                name="title" value="{{$data->title}}" autofocus>
 
                             @error('title')
                             <span class="invalid-feedback" role="alert">
@@ -102,13 +102,13 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="file" class="col-md-2 col-form-label text-md-right">URL Video</label>
+                        <label for="verse" class="col-md-2 col-form-label text-md-right">Bacaan</label>
 
-                        <div class="col-md-6">
-                            <input id="url" type="text" class="form-control @error('url') is-invalid @enderror"
-                                name="url" value="" autofocus>
+                        <div class="col-md-8">
+                            <input id="verse" type="text" class="form-control @error('verse') is-invalid @enderror"
+                                name="verse" value="{{$data->verse}}" autofocus>
 
-                            @error('url')
+                            @error('verse')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -116,9 +116,28 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mb-0">
-                        <div class="col-md-6 offset-md-1">
-                            <input type="submit" class="btn btn-danger btn-danger" value="Upload">
+                    <div class="form-group row">
+                        <label for="content" class="col-md-2 col-form-label text-md-right">Isi renungan</label>
+
+                        <div class="col-md-8">
+                            <textarea id="content" type="text"
+                                class="form-control @error('content') is-invalid @enderror" name="content"
+                                aria-label="With textarea" rows="9" autofocus value="">{{$data->content}}</textarea>
+                            @error('content')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-0 text-right">
+                        <div class="col-sm-4  offset-md-2">
+                            <input type="submit" class="btn btn-block btn-primary" value="Simpan">
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="/admin/renungan/{{$data->id}}/delete" class="btn btn-danger btn-md" role="button"
+                                aria-disabled="true">Hapus</a>
                         </div>
                     </div>
                 </form>

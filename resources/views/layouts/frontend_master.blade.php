@@ -28,8 +28,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style-home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css-video/style.css') }}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -39,7 +37,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style-nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/style-nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-home/style-main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-video/style.css') }}">
+    <link rel="icon" type="image/jpg" href="/favicon.jpg" />
 
     <style type="text/css">
     header {
@@ -78,9 +79,10 @@
 </header>
 
 <body>
-
-    <div class="mt-3 mb-3">
+    <div class="mt-3">
         @yield('content')
+    </div>
+    <div class="mt-4">
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
