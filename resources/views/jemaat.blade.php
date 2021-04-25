@@ -18,38 +18,44 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
 </head>
 
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+    {{session('success')}}
+</div>
+@endif
+@if(session('error'))
+<div class="alert alert-danger" role="alert">
+    {{session('error')}}
+</div>
+@endif
+<!-- /.card-header -->
+<div class="card">
     <!-- /.card-header -->
-    <div class="card">
-        <!-- /.card-header -->
-        <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>No KK</th>
-                        <th>NIK</th>
-                        <th>Kepala Keluarga</th>
-                        <th>Nama</th>
-                        <th>Tgl Lahir</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kepala Keluarga</th>
+                    <th>Nama</th>
+                    <th>Tgl Lahir</th>
+                </tr>
+            </thead>
+            <tbody>
                 @foreach($data as $index => $item)
-                    <tr>
-                        <td>{{ $index +1 }}</td>
-                        <td>{{ $item-> no_kk}}</td>
-                        <td>{{ $item-> nik}}</td>
-                        <td>{{ $item-> head_of_family}}</td>
-                        <td>{{ $item-> name}}</td>
-                        <td>{{ $item-> date_of_birth}}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-        <!-- /.card-body -->
+                <tr>
+                    <td>{{ $index +1 }}</td>
+                    <td>{{ $item-> head_of_family}}</td>
+                    <td><a href="/admin/jemaat/{{ $item->id }}/view">{{ $item-> name}}</a></td>
+                    <td>{{ $item-> date_of_birth}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
     <!-- /.card-body -->
+</div>
+<!-- /.card-body -->
 
 
 <!-- jQuery -->
@@ -64,21 +70,21 @@
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/jszip/jszip.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/pdfmake/pdfmake.min.js') }}"></script>     
+<script src="{{ asset('admin-lte/plugins/pdfmake/pdfmake.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/pdfmake/vfs_fonts.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 <!-- Page specific script -->
 <script>
-    jQuery(document).ready(function ($) {
-        /* now you can use $ */
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    });
+jQuery(document).ready(function($) {
+    /* now you can use $ */
+    $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+});
 </script>
 @endsection

@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Data Pernikahan')
+@section('title', 'Lihat Data Jemaat')
 @section('content')
 
 
@@ -18,44 +18,72 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
 </head>
 
-@if(session('success'))
-<div class="alert alert-success" role="alert">
-    {{session('success')}}
-</div>
-@endif
-@if(session('error'))
-<div class="alert alert-danger" role="alert">
-    {{session('error')}}
-</div>
-@endif
 <!-- /.card-header -->
 <div class="card">
     <!-- /.card-header -->
     <div class="card-body">
-        <table id="example1" class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Tgl Pernikahan</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($data as $index => $item)
-                <tr>
-                    <td>{{ $index +1 }}</td>
-                    <td><a href="/admin/pernikahan/{{ $item->id }}/view">{{ $item-> name1}} - {{ $item-> name2}}</a>
-                    </td>
-                    <td>{{ $item-> date}}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <form action="/admin/pernikahan/{{$data->id}}/update" method="post" enctype="multipart/form-data">
+            @csrf
+
+            <div class="form-group row">
+                <label for="name1" class="col-md-2 col-form-label text-md-right">Nama suami</label>
+
+                <div class="col-md-6">
+                    <input id="name1" type="text" class="form-control @error('name1') is-invalid @enderror" name="name1"
+                        value="{{ $data-> name1}}" autofocus>
+
+                    @error('name1')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="name2" class="col-md-2 col-form-label text-md-right">Nama istri</label>
+
+                <div class="col-md-6">
+                    <input id="name2" type="text" class="form-control @error('name2') is-invalid @enderror" name="name2"
+                        value="{{ $data-> name2}}" autofocus>
+
+                    @error('name2')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="date" class="col-md-2 col-form-label text-md-right">Tgl penikahan</label>
+
+                <div class="col-md-6">
+                    <input id="date" type="text" class="form-control @error('date') is-invalid @enderror" name="date"
+                        value="{{ $data-> date}}" autofocus>
+
+                    @error('date')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row mb-0">
+                <div class="col-md-4 offset-md-2 ">
+                    <input type="submit" class="btn btn-primary" value="Simpan">
+                </div>
+                <div class="col-md-2 text-right">
+                    <a href="/admin/pernikahan/{{$data->id}}/delete" class="btn btn-danger btn-md" role="button"
+                        aria-disabled="true">Hapus</a>
+                </div>
+            </div>
+        </form>
     </div>
     <!-- /.card-body -->
 </div>
 <!-- /.card-body -->
-
 
 <!-- jQuery -->
 <script src="{{ asset('admin-lte/plugins/jquery/jquery.min.js') }}"></script>
@@ -82,7 +110,10 @@ jQuery(document).ready(function($) {
         "responsive": true,
         "lengthChange": false,
         "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        "searching": false,
+        "paging": false,
+        "info": false
+        // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 });
 </script>

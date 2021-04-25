@@ -64,7 +64,8 @@ class HomeController extends Controller
             ->get();
             $data2 = Pernikahan::whereRaw("DAYOFYEAR(date) BETWEEN $first_date AND $last_date")
             ->select(
-                'name',
+                'name1',
+                'name2',
                 DB::raw('YEAR(CURDATE())-DATE_FORMAT(date, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date, "%d-%c-"),YEAR(CURDATE())) as date')
             )
@@ -98,7 +99,8 @@ class HomeController extends Controller
             $data2 = Pernikahan::whereRaw("DAYOFYEAR(date) BETWEEN $first_date AND $last_date")
             ->orWhereRaw("DAYOFYEAR(date) BETWEEN $first_date2 AND $last_date2")
             ->select(
-                'name',
+                'name1',
+                'name2',
                 DB::raw('YEAR(CURDATE())-DATE_FORMAT(date, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date, "%d-%c-"),YEAR(CURDATE())) as date')
             )
@@ -160,7 +162,8 @@ class HomeController extends Controller
             ->get();
             $data2 = Pernikahan::whereRaw("DAYOFYEAR(date) BETWEEN $first_date AND $last_date")
             ->select(
-                'name',
+                'name1',
+                'name2',
                 DB::raw('YEAR(CURDATE())-DATE_FORMAT(date, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date, "%d-%c-"),YEAR(CURDATE())) as date')
             )
@@ -194,7 +197,8 @@ class HomeController extends Controller
             $data2 = Pernikahan::whereRaw("DAYOFYEAR(date) BETWEEN $first_date AND $last_date")
             ->orWhereRaw("DAYOFYEAR(date) BETWEEN $first_date2 AND $last_date2")
             ->select(
-                'name',
+                'name1',
+                'name2',
                 DB::raw('YEAR(CURDATE())-DATE_FORMAT(date, "%Y") as age'),
                 DB::raw('CONCAT(DATE_FORMAT(date, "%d-%c-"),YEAR(CURDATE())) as date')
             )
@@ -216,9 +220,94 @@ class HomeController extends Controller
         return view('jemaat', ['data'=>$data]);
     }
 
+    public function jemaatView($id)
+    {
+        $data = Jemaat::find($id);
+        $relate = Jemaat::where('no_kk', '=', $data->no_kk)->get();
+        
+        return view('jemaatView', ['data'=>$data, 'relate'=>$relate]);
+    }
+
+    public function jemaatUpdate(Request $request, $id)
+    {
+        $request->validate([
+            'no_kk'             => 'required',
+            'nik'               => 'required',
+            'name'              => 'required',
+            'head_of_family'    => 'required',
+            'birthplace'        => 'required',
+            'date_of_birth'     => 'required',
+        ]);
+
+        $jemaat = Jemaat::find($id);
+        
+        if (!$jemaat) {
+            return redirect('/admin/jemaat')->with('error', 'Data tidak ada!');
+        }
+        $jemaat->no_kk            = $request-> no_kk;
+        $jemaat->nik              = $request-> nik;
+        $jemaat->name             = $request-> name;
+        $jemaat->head_of_family   = $request-> head_of_family;
+        $jemaat->birthplace       = $request-> birthplace;
+        $jemaat->date_of_birth    = $request-> date_of_birth;
+        $jemaat->save();
+        
+        return redirect('/admin/jemaat')->with('success', 'Data tersimpan!');
+    }
+    
+    public function jemaatDelete($id)
+    {
+        //
+        $jemaat = Jemaat::find($id);
+        if (!$jemaat) {
+            return redirect('/admin/jemaat')->with('error', 'Data tidak ada!');
+        }
+        $jemaat->delete($id);
+
+        return redirect('/admin/jemaat')->with('success', 'Data telah dihapus!');
+    }
+
     public function pernikahan()
     {
         $data = Pernikahan::all();
         return view('pernikahan', ['data'=>$data]);
+    }
+    
+    public function pernikahanView($id)
+    {
+        $data = Pernikahan::find($id);
+        return view('pernikahanView', ['data'=>$data]);
+    }
+
+    public function pernikahanUpdate(Request $request, $id)
+    {
+        $request->validate([
+            'name1'=> 'required',
+            'name2'=> 'required',
+            'date' => 'required',
+        ]);
+
+        $pernikahan = Pernikahan::find($id);
+        
+        if (!$pernikahan) {
+            return redirect('/admin/pernikahan')->with('error', 'Data tidak ada!');
+        }
+        $pernikahan->name1   = $request-> name1;
+        $pernikahan->name2   = $request-> name2;
+        $pernikahan->date    = $request-> date;
+        $pernikahan->save();
+        
+        return redirect('/admin/pernikahan')->with('success', 'Data tersimpan!');
+    }
+    
+    public function pernikahanDelete($id)
+    {
+        $pernikahan = Pernikahan::find($id);
+        if (!$pernikahan) {
+            return redirect('/admin/pernikahan')->with('error', 'Data tidak ada!');
+        }
+        $pernikahan->delete($id);
+
+        return redirect('/admin/pernikahan')->with('success', 'Data telah dihapus!');
     }
 }

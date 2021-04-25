@@ -15,7 +15,8 @@ class CreatePernikahanTable extends Migration
     {
         Schema::create('pernikahan', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 191);
+            $table->string('name1', 191);
+            $table->string('name2', 191);
             $table->date('date');
             $table->timestamps();
         });

@@ -72,7 +72,14 @@
                         <i class="fas fa-th-large"></i>
                     </a>
                 </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" data-toggle="modal" data-target="#logoutModal" role="button">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
             </ul>
+
         </nav>
         <!-- /.navbar -->
 
@@ -119,7 +126,7 @@
                             with font-awesome or any other icon font library -->
                         <!-- <li class="nav-header">MENU</li> -->
                         <li class="nav-item">
-                            <a href="/admin/dashboard" class="nav-link active">
+                            <a href="/admin/dashboard" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt" aria-hidden="true"></i>
                                 <p>
                                     Dashboard
@@ -238,6 +245,29 @@
     </div>
     <!-- ./wrapper -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log Out?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Keluar dari dashboard admin?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <form action="/logout">
+                        <button type="submit" class="btn btn-primary">Keluar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- jQuery -->
     <script src="{{ asset('admin-lte/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -268,6 +298,24 @@
     $(".nav-link").on("click", function() {
         $(".nav-link").find(".active").removeClass("active");
         $(this).parent().addClass("active");
+    });
+
+    $(function() {
+        var url = window.location;
+        // for single sidebar menu
+        $('ul.nav-sidebar a').filter(function() {
+            return this.href == url;
+        }).addClass('active');
+
+        // for sidebar menu and treeview
+        $('ul.nav-treeview a').filter(function() {
+                return this.href == url;
+            }).parentsUntil(".nav-sidebar > .nav-treeview")
+            .css({
+                'display': 'block'
+            })
+            .addClass('menu-open').prev('a')
+            .addClass('active');
     });
     </script>
 </body>

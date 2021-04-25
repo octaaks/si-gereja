@@ -8,6 +8,6 @@ class Pernikahan extends Model
 {
     protected $table = "pernikahan";
     protected $fillable = [
-        'name', 'date'
+        'name1','name2', 'date'
     ];
 }

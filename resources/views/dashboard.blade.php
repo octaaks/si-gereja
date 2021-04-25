@@ -53,7 +53,7 @@
                     <th>Kepala Keluarga</th>
                     <th>Nama</th>
                     <th>UL ke</th>
-                    <th>Tgl Lahir</th>
+                    <th>Tgl Ultah</th>
                 </tr>
             </thead>
             <tbody>
@@ -88,7 +88,7 @@
                 @foreach($data2 as $index => $item)
                 <tr>
                     <td>{{ $index +1 }}</td>
-                    <td>{{ $item-> name}}</td>
+                    <td>{{ $item-> name1}} - {{ $item-> name2}}</td>
                     <td>{{ $item-> age}}</td>
                     <td>{{ $item-> date}}</td>
                 </tr>

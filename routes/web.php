@@ -53,7 +53,15 @@ Route::middleware('role:admin')->get('admin', 'HomeController@dashboard')->name(
 Route::middleware('role:admin')->get('admin/week', 'HomeController@week')->name('week');
 
 Route::middleware('role:admin')->get('admin/jemaat', 'HomeController@jemaat')->name('jemaat');
+Route::middleware('role:admin')->get('admin/jemaat/{id}/view', 'HomeController@jemaatView')->name('view_jemaat');
+Route::middleware('role:admin')->post('admin/jemaat/{id}/update', 'HomeController@jemaatUpdate')->name('update_jemaat');
+Route::middleware('role:admin')->get('admin/jemaat/{id}/delete', 'HomeController@jemaatDelete')->name('delete_jemaat');
+
 Route::middleware('role:admin')->get('admin/pernikahan', 'HomeController@pernikahan')->name('pernikahan');
+Route::middleware('role:admin')->get('admin/pernikahan/{id}/view', 'HomeController@pernikahanView')->name('view_pernikahan');
+Route::middleware('role:admin')->post('admin/pernikahan/{id}/update', 'HomeController@pernikahanUpdate')->name('update_pernikahan');
+Route::middleware('role:admin')->get('admin/pernikahan/{id}/delete', 'HomeController@pernikahanDelete')->name('delete_pernikahan');
+
 
 Route::middleware('role:admin')->get('admin/liturgi', 'LiturgiController@index')->name('liturgi');
 Route::middleware('role:admin')->get('admin/liturgi/{id}/edit', 'LiturgiController@edit')->name('edit_liturgi');
@@ -93,3 +101,5 @@ Route::get('/test', function () {
 Route::post('/upload', function (Request $request) {
     dd($request->file("thing")->store("", "google"));
 })->name("upload");
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
