@@ -287,8 +287,7 @@
 
 <div style="background:#ffffff; padding:20px; text-align:center;">
 
-    <img style="height:40px; margin-right:20px" src="./img/logo.png" alt="">Copyright 2021 "©" Bang
-    Jago. All Right Reserved.
+    <img style="height:40px; margin-right:20px" src="./img/logo.png" alt="">Copyright 2021 "©" Joeee. All Right Reserved.
 </div>
 
 </html>
