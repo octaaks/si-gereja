@@ -3,8 +3,22 @@
 @section('content')
 
 <div class="container">
-    <h4>Warta Jemaat</h4>
-    <ul class="list-group mt-3">
+    <div class="row">
+        <div class="col-lg-8">
+            <h4>Warta Jemaat</h4>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+
+                <form action="/warta/search" method="GET">
+                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <ul class="list-group mt-5">
 
         @foreach($warta as $item)
         <li class="list-group-item">

@@ -103,3 +103,9 @@ Route::post('/upload', function (Request $request) {
 })->name("upload");
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+//search
+Route::get('/liturgi/search', 'LiturgiController@searchLiturgi');
+Route::get('/warta/search', 'WartaController@searchWarta');
+Route::get('/video/search', 'VideoController@searchVideo');
+Route::get('/renungan/search', 'RenunganController@searchRenungan');

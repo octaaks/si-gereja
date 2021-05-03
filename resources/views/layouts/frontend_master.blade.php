@@ -79,7 +79,7 @@
 </header>
 
 <body>
-    <div class="mt-3">
+    <div class="mt-5">
         @yield('content')
     </div>
     <div class="mt-4">

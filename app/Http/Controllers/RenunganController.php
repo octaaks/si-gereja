@@ -85,4 +85,15 @@ class RenunganController extends Controller
 
         return redirect('/admin/renungan')->with('success', 'Renungan telah dihapus!');
     }
+    
+    
+    public function searchRenungan(Request $request)
+    {
+        $cari = $request->search;
+    
+        $data = Renungan::where('title', 'like', "%".$cari."%")
+        ->paginate();
+    
+        return view('frontend.list_renungan', ['renungan' => $data]);
+    }
 }

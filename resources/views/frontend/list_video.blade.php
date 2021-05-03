@@ -13,8 +13,22 @@
 </head>
 
 <div class="container">
-    <h3>Video Ibadah</h3>
-    <div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-8 mt-1">
+            <h4>Video Ibadah</h4>
+        </div>
+        <div class="col-lg-4 mt-1">
+            <div class="input-group">
+
+                <form action="/video/search" method="GET">
+                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
         <div class="mt-2">
             <div class="youtube_video video-holder" id="video_holder">
                 <iframe width="100%" height="100%" id="video_id" src="" frameborder="0"

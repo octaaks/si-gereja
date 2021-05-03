@@ -125,4 +125,14 @@ class VideoController extends Controller
 
         return redirect('/admin/video')->with('success', 'Data telah dihapus!');
     }
+    
+    public function searchVideo(Request $request)
+    {
+        $cari = $request->search;
+    
+        $data = Video::where('title', 'like', "%".$cari."%")
+        ->paginate();
+    
+        return view('frontend.list_video', ['video' => $data])->with('key', 'Hasil pencarian untuk "'. $cari .'"');
+    }
 }

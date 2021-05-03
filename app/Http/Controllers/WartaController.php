@@ -96,4 +96,18 @@ class WartaController extends Controller
 
         return redirect('/admin/warta')->with('success', 'Data telah dihapus!');
     }
+    
+    public function searchWarta(Request $request)
+    {
+        $cari = $request->search;
+    
+        $data = Warta::where('title', 'like', "%".$cari."%")->select(
+            'id',
+            'title',
+            DB::raw("DATE_FORMAT(created_at, ' %d %b %Y') as date")
+        )
+        ->paginate();
+    
+        return view('frontend.list_warta', ['warta' => $data]);
+    }
 }

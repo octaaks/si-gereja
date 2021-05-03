@@ -107,7 +107,7 @@
                     <tr>
                         <th>No</th>
                         <th>Judul</th>
-                        <th>File</th>
+                        <th>ID Video</th>
                         <th>Opsi</th>
                     </tr>
                 </thead>

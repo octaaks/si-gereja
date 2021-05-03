@@ -70,7 +70,7 @@
 
 <body>
 
-@if(session('success'))
+    @if(session('success'))
     <div class="alert alert-success" role="alert">
         {{session('success')}}
     </div>
@@ -102,7 +102,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="file" class="col-md-2 col-form-label text-md-right">URL Video</label>
+                        <label for="file" class="col-md-2 col-form-label text-md-right">ID Video</label>
 
                         <div class="col-md-6">
                             <input id="url" type="text" class="form-control @error('url') is-invalid @enderror"
@@ -118,7 +118,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-1">
-                            <input type="submit" class="btn btn-danger btn-danger" value="Upload">
+                            <input type="submit" class="btn btn-danger btn-danger" value="Simpan">
                         </div>
                     </div>
                 </form>

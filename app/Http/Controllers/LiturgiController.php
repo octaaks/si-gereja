@@ -142,4 +142,18 @@ class LiturgiController extends Controller
 
         return redirect('/admin/liturgi')->with('success', 'Data telah dihapus!');
     }
+    
+    public function searchLiturgi(Request $request)
+    {
+        $cari = $request->search;
+    
+        $data = Liturgi::where('title', 'like', "%".$cari."%")->select(
+            'id',
+            'title',
+            DB::raw("DATE_FORMAT(created_at, ' %d %b %Y') as date")
+        )
+        ->paginate();
+    
+        return view('frontend.list_liturgi', ['liturgi' => $data]);
+    }
 }

@@ -335,8 +335,15 @@ section.contact input:focus {
 
 section.contact .btn-wrapper {
     text-align: center;
-    margin-top: 2rem;
 
+}
+
+.btn-search{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
 }
 
 .footer-home {
