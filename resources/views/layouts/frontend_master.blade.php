@@ -78,12 +78,16 @@
     </nav>
 </header>
 
-<body>
+<body
+    style="background: #eeeeee; background-image: url('/img/bg.jpg'); background-size: cover; background-attachment: fixed;">
+
     <div class="mt-5">
         @yield('content')
     </div>
     <div class="mt-4">
+        @include('layouts.footer')
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

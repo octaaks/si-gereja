@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 mt-1">
-            <h4>Video Ibadah</h4>
+            <h3 class="list-heading"><span> Video </span> Ibadah </h3>
         </div>
         <div class="col-lg-4 mt-1">
             <div class="input-group">

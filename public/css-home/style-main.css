@@ -34,6 +34,24 @@ header {
     /* height: 800px; */
 }
 
+.list-item {
+    color: #040505;
+    border-radius: 0rem;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
+
+.list-item:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.list-title {
+    font-family: 'Oswald', sans-serif;
+    color: #040505;
+}
+
 /* TITLE HOME */
 :-webkit-any(article, aside, nav, section) h1 {
     font-size: 1.5em;
@@ -218,6 +236,27 @@ section.about .social a img {
 
 }
 
+.list-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.list-heading span {
+    color: var(--primary);
+}
+
+.thumbnail-renungan {
+    width: 160px;
+    height: 160px;
+    margin-right: 15px;
+}
+
+.thumbnail-renungan img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 section.service {
     background-color: #ffffff;
 }
@@ -338,7 +377,7 @@ section.contact .btn-wrapper {
 
 }
 
-.btn-search{
+.btn-search {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
@@ -727,6 +766,21 @@ footer .copyright {
     }
 }
 
+@media (max-width: 768px) {
+    header {
+        background: rgba(22, 22, 22, 255);
+        clip-path: none;
+    }
+}
+
+@media (max-width: 512px) {
+    .thumbnail-renungan {
+        width: 90px;
+        height: 90px;
+        margin-right: 10px;
+    }
+}
+
 @media (min-width: 0px) {
     body:not(.sidebar-mini-md) .main-footer {
         margin-left: 0px;
@@ -758,4 +812,4 @@ footer .copyright {
     position: absolute;
     bottom: 0;
     width: 100%;
-  }
+}

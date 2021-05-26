@@ -2,10 +2,17 @@
 @section('title', 'Warta Jemaat')
 @section('content')
 
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css-home/style-main.css') }}">
+</head>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
-            <h4>Warta Jemaat</h4>
+            <h3 class="list-heading"><span> Warta </span> Jemaat </h3>
         </div>
         <div class="col-lg-4">
             <div class="input-group">
@@ -21,18 +28,19 @@
     <ul class="list-group mt-5">
 
         @foreach($warta as $item)
-        <li class="list-group-item">
-            <div class="row">
-                <div class="col-lg-6">
 
-                    <a href="warta/view/{{$item->id}}">
-                        <b>{{$item->title}}</b></a>
-                </div>
-                <div class="col-lg-6 text-right date-text">
+        <div class="card list-item">
+            <div class="card-body">
+                <p>
+                    <a href="warta/view/{{$item->id}}" class="list-title">
+                        <h3><b>{{$item->title}}</b></h3>
+                    </a>
+                </p>
+                <p>
                     Diupload pada: {{$item->date}}
-                </div>
+                </p>
             </div>
-        </li>
+        </div>
         @endforeach
     </ul>
     {{$warta->links()}}

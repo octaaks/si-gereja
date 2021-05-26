@@ -118,7 +118,7 @@
             </div>
 
             <div class="form-group row mb-0">
-                <div class="col-md-4 offset-md-2 ">
+                <div class="col-md-4 offset-md-2">
                     <input type="submit" class="btn btn-primary" value="Simpan">
                 </div>
                 <div class="col-md-2 text-right">

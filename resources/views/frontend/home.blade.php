@@ -250,10 +250,13 @@
     <div class="footer-home">
         <!-- <div class="row"> -->
         <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="90%" height="300px" id="gmap_canvas"
+            <div class="gmap_canvas">
+                <iframe width="90%" height="300px" id="gmap_canvas"
                     src="https://maps.google.com/maps?q=GKE%20haleluya%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                    href="https://www.whatismyip-address.com/divi-discount/"></a><br>
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+                <a href="https://www.whatismyip-address.com/divi-discount/"></a>
+                <br>
                 <style>
                 .mapouter {
                     position: relative;

@@ -52,7 +52,6 @@ class HomeController extends Controller
             $last_date = date('z', strtotime($ld)) + 1;
 
             // dd($first_date);
-            
             $data = Jemaat::whereRaw("DAYOFYEAR(date_of_birth) BETWEEN $first_date AND $last_date")
             ->select(
                 'head_of_family',
