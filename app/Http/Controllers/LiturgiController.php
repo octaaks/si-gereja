@@ -147,6 +147,7 @@ class LiturgiController extends Controller
     {
         $cari = $request->search;
     
+        $key = 'Menampilkan hasil untuk "'.$cari.'"';
         $data = Liturgi::where('title', 'like', "%".$cari."%")->select(
             'id',
             'title',
@@ -154,6 +155,6 @@ class LiturgiController extends Controller
         )
         ->paginate();
     
-        return view('frontend.list_liturgi', ['liturgi' => $data]);
+        return view('frontend.list_liturgi', ['liturgi' => $data, 'key'=> $key]);
     }
 }

@@ -62,7 +62,6 @@ Route::middleware('role:admin')->get('admin/pernikahan/{id}/view', 'HomeControll
 Route::middleware('role:admin')->post('admin/pernikahan/{id}/update', 'HomeController@pernikahanUpdate')->name('update_pernikahan');
 Route::middleware('role:admin')->get('admin/pernikahan/{id}/delete', 'HomeController@pernikahanDelete')->name('delete_pernikahan');
 
-
 Route::middleware('role:admin')->get('admin/liturgi', 'LiturgiController@index')->name('liturgi');
 Route::middleware('role:admin')->get('admin/liturgi/{id}/edit', 'LiturgiController@edit')->name('edit_liturgi');
 Route::middleware('role:admin')->get('admin/liturgi/create', 'LiturgiController@create')->name('create_liturgi');

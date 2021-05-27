@@ -102,7 +102,11 @@
                 <h6>{{$data->verse}}</h6>
             </div>
         </div>
-        <div class="card-body text-left">
+
+        <div class="renungan-image mt-3">
+            <img style="width:20%" src="/{{$data->image_url}}">
+        </div>
+        <div class="card-body text-left" style="white-space: pre-line">
             {{$data->content}}
         </div>
         <!-- /.card-body -->

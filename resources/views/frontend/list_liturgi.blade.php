@@ -25,6 +25,12 @@
 
     <!-- <ul class="list-group mt-5"> -->
 
+    <div class="search-label mb-3">
+        @if(empty($key))
+        @else
+        {{$key}}
+        @endif
+    </div>
     @foreach($liturgi as $item)
     <div class="card list-item">
         <div class="card-body">

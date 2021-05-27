@@ -36,10 +36,15 @@
                     allowfullscreen></iframe>
             </div>
         </div>
-
+        <div class="search-label mb-3">
+            @if(empty($key))
+            @else
+            {{$key}}
+            @endif
+        </div>
         <div class="gallery d-flex align-content-sm-center flex-wrap mt-3">
             @foreach($video as $item)
-            <a class="item mt-2" href="#video_holder">
+            <a class="item mt-2 mb-3" href="#video_holder">
                 <img src="https://img.youtube.com/vi/{{$item->url}}/mqdefault.jpg" data-id="{{$item->url}}?rel=0">
                 <div class="youtube_icon">
                     <img src="image/youtube.svg">

@@ -101,6 +101,7 @@ class WartaController extends Controller
     {
         $cari = $request->search;
     
+        $key = 'Menampilkan hasil untuk "'.$cari.'"';
         $data = Warta::where('title', 'like', "%".$cari."%")->select(
             'id',
             'title',
@@ -108,6 +109,6 @@ class WartaController extends Controller
         )
         ->paginate();
     
-        return view('frontend.list_warta', ['warta' => $data]);
+        return view('frontend.list_warta', ['warta' => $data, 'key'=> $key]);
     }
 }

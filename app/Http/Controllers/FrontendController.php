@@ -48,6 +48,7 @@ class FrontendController extends Controller
             'title',
             'verse',
             'content',
+            'image_url',
             DB::raw("DATE_FORMAT(created_at, ' %d %b %Y') as date")
         )->orderBy('date', 'DESC')->paginate(10);
         

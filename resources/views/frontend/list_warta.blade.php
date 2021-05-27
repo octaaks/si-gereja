@@ -10,7 +10,7 @@
 </head>
 
 <div class="container">
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-lg-8">
             <h3 class="list-heading"><span> Warta </span> Jemaat </h3>
         </div>
@@ -25,7 +25,13 @@
             </div>
         </div>
     </div>
-    <ul class="list-group mt-5">
+    <div class="search-label mb-3">
+        @if(empty($key))
+        @else
+        {{$key}}
+        @endif
+    </div>
+    <ul class="list-group">
 
         @foreach($warta as $item)
 

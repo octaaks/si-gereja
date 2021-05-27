@@ -9,6 +9,6 @@ class Renungan extends Model
     //
     protected $table = "renungan";
     protected $fillable = [
-        'title', 'verse', 'content'
+        'title', 'verse', 'content','image_url'
     ];
 }

@@ -246,12 +246,25 @@ section.about .social a img {
 }
 
 .thumbnail-renungan {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     margin-right: 15px;
 }
 
 .thumbnail-renungan img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.renungan-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 256px;
+    height: 256px;
+}
+
+.renungan-image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -383,6 +396,13 @@ section.contact .btn-wrapper {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: 10px;
+}
+
+.search-label {
+    font-family: 'Poppins', sans-serif;
+    color: #121212;
+    font-style: italic;
+    font-weight: 400;
 }
 
 .footer-home {
@@ -759,6 +779,7 @@ footer .copyright {
 .filler {
     height: 512px;
 }
+
 
 @media (min-height: 768px) {
     .filler {

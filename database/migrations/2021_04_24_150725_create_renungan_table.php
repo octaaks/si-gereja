@@ -18,6 +18,7 @@ class CreateRenunganTable extends Migration
             $table->string('title');
             $table->string('verse');
             $table->text('content');
+            $table->string('image_url');
             $table->timestamps();
         });
     }
