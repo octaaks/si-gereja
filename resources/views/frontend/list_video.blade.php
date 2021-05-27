@@ -50,7 +50,7 @@
                     <img src="image/youtube.svg">
                 </div>
                 <div class="video-title">
-                    {{$item->title}}
+                    {{ \Illuminate\Support\Str::limit($item->title, 30, $end='...') }}
                 </div>
                 <div class="video-date">
                     {{$item->created_at->diffForHumans()}}
