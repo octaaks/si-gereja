@@ -58,6 +58,12 @@
             </a>
             @endforeach
         </div>
+        <div class="text-left mt-3">
+            <div class="page-label mb-2">Jumlah Data : {{ $video->total() }} </div><br />
+            <div class="text-left">
+                {{$video->links()}}
+            </div>
+        </div>
     </div>
 
 </div>

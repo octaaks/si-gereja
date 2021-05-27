@@ -47,8 +47,12 @@
     @endforeach
 
     <!-- </ul> -->
-    {{$liturgi->links()}}
-
+    <div class="text-left mt-3">
+        <div class="page-label mb-2">Jumlah Data : {{ $liturgi->total() }} </div><br />
+        <div class="text-left">
+            {{$liturgi->links()}}
+        </div>
+    </div>
 </div>
 
 @endsection

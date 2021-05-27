@@ -71,7 +71,12 @@
         </div>
         @endforeach
     </ul>
-    {{$renungan->links()}}
+    <div class="text-left mt-3">
+        <div class="page-label mb-2">Jumlah Data : {{ $renungan->total() }} </div><br />
+        <div class="text-left">
+            {{$renungan->links()}}
+        </div>
+    </div>
 
 </div>
 @endsection

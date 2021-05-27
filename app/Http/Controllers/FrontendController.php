@@ -64,7 +64,7 @@ class FrontendController extends Controller
         //     DB::raw("created_at->diffForHumans() as date")
         // )->get();
 
-        $video = Video::orderBy('created_at', 'DESC')->get();
+        $video = Video::orderBy('created_at', 'DESC')->paginate(12);
         
         // dd(Carbon::parse($video->created_at)->diffForHumans());
         // $video->created_at->diffForHumans();

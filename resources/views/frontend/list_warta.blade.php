@@ -49,6 +49,11 @@
         </div>
         @endforeach
     </ul>
-    {{$warta->links()}}
+    <div class="text-left mt-3">
+        <div class="page-label mb-2">Jumlah Data : {{ $warta->total() }} </div><br />
+        <div class="text-left">
+            {{$warta->links()}}
+        </div>
+    </div>
 </div>
 @endsection

@@ -48,7 +48,8 @@ header {
 }
 
 .list-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
     color: #040505;
 }
 
@@ -403,6 +404,14 @@ section.contact .btn-wrapper {
     color: #121212;
     font-style: italic;
     font-weight: 400;
+}
+
+.page-label {
+    font-family: 'Poppins', sans-serif;
+    color: #121212;
+    font-style: italic;
+    font-size: small;
+    font-weight: 300;
 }
 
 .footer-home {
