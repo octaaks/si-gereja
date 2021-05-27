@@ -131,7 +131,7 @@ class VideoController extends Controller
         $cari = $request->search;
     
         $data = Video::where('title', 'like', "%".$cari."%")
-        ->paginate();
+        ->paginate(12);
     
         return view('frontend.list_video', ['video' => $data])->with('key', 'Hasil pencarian untuk "'. $cari .'"');
     }

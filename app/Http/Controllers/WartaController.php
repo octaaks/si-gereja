@@ -107,7 +107,7 @@ class WartaController extends Controller
             'title',
             DB::raw("DATE_FORMAT(created_at, ' %d %b %Y') as date")
         )
-        ->paginate();
+        ->paginate(10);
     
         return view('frontend.list_warta', ['warta' => $data, 'key'=> $key]);
     }

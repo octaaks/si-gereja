@@ -153,7 +153,7 @@ class LiturgiController extends Controller
             'title',
             DB::raw("DATE_FORMAT(created_at, ' %d %b %Y') as date")
         )
-        ->paginate(2);
+        ->paginate(10);
     
         return view('frontend.list_liturgi', ['liturgi' => $data, 'key'=> $key]);
     }

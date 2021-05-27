@@ -122,7 +122,7 @@ class RenunganController extends Controller
             'image_url',
             DB::raw("DATE_FORMAT(created_at, ' %d %b %Y') as date")
         )
-        ->paginate();
+        ->paginate(10);
     
         return view('frontend.list_renungan', ['renungan' => $data, 'key'=> $key]);
     }
