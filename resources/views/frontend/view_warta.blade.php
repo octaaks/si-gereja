@@ -9,8 +9,8 @@
             height="600" frameborder="0" scrolling="yes"></iframe>
     </div> -->
     <div class="d-flex justify-content-center mt-5">
-        <embed src="{{ asset('/') }}{{$warta->filename}}#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf"
-            width="100%" height="600px" />
+        <embed src="{{ asset('/') }}{{$warta->filename}}#toolbar=1&navpanes=0&scrollbar=1&view=fitH"
+            type="application/pdf" width="100%" height="600px" />
     </div>
     <a class="btn btn-info mt-3" href="{{ asset('/') }}{{$warta->filename}}"><i class="fas fa-file-download"></i>
         DOWNLOAD
