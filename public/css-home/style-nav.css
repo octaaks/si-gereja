@@ -11,7 +11,8 @@
 
 /* Navbar */
 
-nav .btn, header .btn {
+nav .btn,
+header .btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 600;
@@ -23,24 +24,25 @@ nav .btn, header .btn {
     border-radius: .5px;
 }
 
-nav .btn-primary,header .btn-primary{
+nav .btn-primary,
+header .btn-primary {
     background: var(--primary);
     color: var(--secondary);
-    background-color:var(--primary);
+    background-color: var(--primary);
 }
 
-nav .btn-primary:hover{
+nav .btn-primary:hover {
     background: transparent;
     border-color: var(--primary);
     color: var(--primary);
-    
+
 }
 
-header .btn-primary:hover{
+header .btn-primary:hover {
     background: transparent;
     border-color: var(--primary);
     color: var(--primary);
-    
+
 }
 
 .navbar {
