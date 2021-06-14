@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+
 </head>
 
 <!-- /.card-header -->
@@ -105,10 +108,16 @@
                 <label for="date_of_birth" class="col-md-2 col-form-label text-md-right">Tgl Lahir</label>
 
                 <div class="col-md-6">
-                    <input id="date_of_birth" type="text"
-                        class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth"
-                        value="{{ $data-> date_of_birth}}" autofocus>
 
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                        <input id="date_of_birth" type="text"
+                            class="datepicker form-control @error('date_of_birth') is-invalid @enderror"
+                            name="date_of_birth" value="{{ $data-> date_of_birth}}" autofocus>
+
+                    </div>
                     @error('date_of_birth')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -187,6 +196,8 @@
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 <!-- Page specific script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+
 <script>
 jQuery(document).ready(function($) {
     /* now you can use $ */
@@ -199,6 +210,11 @@ jQuery(document).ready(function($) {
         "info": false
         // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true
+    });
 });
 </script>
 @endsection

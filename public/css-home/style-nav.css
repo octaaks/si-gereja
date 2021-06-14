@@ -12,7 +12,8 @@
 /* Navbar */
 
 nav .btn,
-header .btn {
+header .btn,
+.btn-wrapper .btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 600;
@@ -25,20 +26,16 @@ header .btn {
 }
 
 nav .btn-primary,
-header .btn-primary {
+header .btn-primary,
+.btn-wrapper .btn-primary {
     background: var(--primary);
     color: var(--secondary);
     background-color: var(--primary);
 }
 
-nav .btn-primary:hover {
-    background: transparent;
-    border-color: var(--primary);
-    color: var(--primary);
-
-}
-
-header .btn-primary:hover {
+nav .btn-primary:hover,
+header .btn-primary:hover,
+.btn-wrapper .btn-primary:hover {
     background: transparent;
     border-color: var(--primary);
     color: var(--primary);
@@ -193,6 +190,13 @@ header .btn-primary:hover {
     /* border-radius: 40px; */
 }
 
+.nav-link {
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(143, 252, 252, 0.315);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 1);
+
+}
+
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
 
@@ -200,7 +204,8 @@ header .btn-primary:hover {
     .nav-link {
         /* color: white !important; */
         /* color: rgb(26, 26, 26) !important; */
-        text-shadow: 1px 1px 1px rgba(36, 47, 66, 0.432);
+        text-shadow: 1px 1px 1px rgba(36, 47, 66, 0.5);
+        font-weight: 600;
         /* !importan untuk memaksa menampilkan */
     }
 

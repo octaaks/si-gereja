@@ -96,9 +96,10 @@
     <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
-            <div style="margin:10px" class="row">
+            <div class="row mb-3">
                 <div class="col-md-auto">
-                    <a href="renungan/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Tulis
+                    <a href="renungan/create" class="btn btn-primary btn-md" role="button" aria-disabled="true"><i
+                            class="fas fa-plus mr-2"></i>Tulis
                         Renungan</a>
                 </div>
             </div>

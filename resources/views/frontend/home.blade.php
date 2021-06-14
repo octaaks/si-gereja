@@ -23,7 +23,7 @@
 
 <body>
     <header>
-        <div style="background: #eeeeee; background-image: url('worship.jpg'); background-size: cover">
+        <div class="header-background">
             <div class="container">
                 <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -49,16 +49,17 @@
 
                 <!-- Akhir Navbar -->
                 <div class="hero flex items-center justify-between row">
-                    <div class="col-md-6 left flex-1 flex justify-center">
+                    <div class="filler-collumn col-md-6 left flex-1 flex justify-center">
                         <div class="filler">
                         </div>
                     </div>
                     <div class="col-md-6 right flex-1 flex justify-center">
-                        <div style="">
-                            <h1 style="text-shadow: 0px 0px 15px #5555ff;">Amsal <span> 19:21 </span> </h1>
-                            <p style="text-shadow: 1px 1px 2px #010101;">Banyaklah rancangan di hati manusia, tetapi
-                                keputusan TUHANlah yang terlaksana.</p>
-                            <div>
+                        <div class="top-title">
+                            <h1 style="text-shadow: 0px 0px 15px #5555ff;">Amsal <span> 19:21 </span>
+                            </h1>
+                            <p style="text-shadow: 1px 1px 2px #010101;">Banyaklah rancangan di hati
+                                manusia, tetapi keputusan TUHANlah yang terlaksana.</p>
+                            <div class="stream-btn">
                                 <!-- <button class=" btn btn-secondary">LIVE STREAMING</button> -->
                                 <form action="https://www.youtube.com/channel/UC3Rd92grtJT-X5JZBP1rWPA">
                                     <button class="btn btn-primary">LIVE STREAMING</button>
@@ -231,16 +232,23 @@
             @endif
             <form action="{{ route('send.email') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="input-wrap">
-                    <input type="text" name="name" placeholder="Name *">
-                    <input type="email" name="email" placeholder=" Email *">
+                <div class="input-wrap-2">
+                    <input type="text" name="name" placeholder="Name *" required="required">
                 </div>
                 <div class="input-wrap-2">
-                    <input type="text" name="subject" placeholder="Subject...">
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Tulis Pesan...."></textarea>
+                    <input type="email" name="email" placeholder=" Email *" required="required">
                 </div>
-                <div class="btn-wrapper">
-                    <input type="submit" class="nav-item btn btn-primary tombol" value="KIRIM EMAIL"></input>
+                <div class="input-wrap-2">
+                    <input type="text" name="no_hp" placeholder=" No HP *" required="required">
+                </div>
+                <div class="input-wrap-2">
+                    <input type="text" name="subject" placeholder="Subjek..." required="required">
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Tulis Pesan...."
+                        required="required"></textarea>
+                </div>
+                <div class="btn-wrapper mt-3">
+                    <input type="submit" class="btn btn-primary" value="KIRIM EMAIL"></input>
+                    <!-- <button type="submit" class="btn btn-primary tombol nav-item">KIRIM EMAIL</button> -->
                 </div>
             </form>
         </div>

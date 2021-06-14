@@ -54,11 +54,15 @@ Route::middleware('role:admin')->get('admin/week', 'HomeController@week')->name(
 
 Route::middleware('role:admin')->get('admin/jemaat', 'HomeController@jemaat')->name('jemaat');
 Route::middleware('role:admin')->get('admin/jemaat/{id}/view', 'HomeController@jemaatView')->name('view_jemaat');
+Route::middleware('role:admin')->get('admin/jemaat/create', 'HomeController@jemaatCreate')->name('create_jemaat');
+Route::middleware('role:admin')->post('admin/jemaat/store', 'HomeController@jemaatStore')->name('store_jemaat');
 Route::middleware('role:admin')->post('admin/jemaat/{id}/update', 'HomeController@jemaatUpdate')->name('update_jemaat');
 Route::middleware('role:admin')->get('admin/jemaat/{id}/delete', 'HomeController@jemaatDelete')->name('delete_jemaat');
 
 Route::middleware('role:admin')->get('admin/pernikahan', 'HomeController@pernikahan')->name('pernikahan');
 Route::middleware('role:admin')->get('admin/pernikahan/{id}/view', 'HomeController@pernikahanView')->name('view_pernikahan');
+Route::middleware('role:admin')->get('admin/pernikahan/create', 'HomeController@pernikahanCreate')->name('create_pernikahan');
+Route::middleware('role:admin')->post('admin/pernikahan/store', 'HomeController@pernikahanStore')->name('store_pernikahan');
 Route::middleware('role:admin')->post('admin/pernikahan/{id}/update', 'HomeController@pernikahanUpdate')->name('update_pernikahan');
 Route::middleware('role:admin')->get('admin/pernikahan/{id}/delete', 'HomeController@pernikahanDelete')->name('delete_pernikahan');
 

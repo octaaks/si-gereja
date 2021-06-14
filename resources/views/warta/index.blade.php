@@ -95,10 +95,11 @@
     <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
-            <div style="margin:10px" class="row">
+            <div class="row mb-3">
                 <div class="col-md-auto">
-                    <a href="warta/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Upload
-                        Warta Gereja</a>
+                    <a href="warta/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">
+                        <i class="fas fa-plus mr-2"></i>Upload Warta Gereja
+                    </a>
                 </div>
             </div>
 

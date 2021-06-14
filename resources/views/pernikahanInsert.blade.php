@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Lihat Data Pernikahan')
+@section('title', 'Tambah Data Pernikahan')
 @section('content')
 
 
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
+
+    <!-- CSS Bootstrap Datepicker -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
 
@@ -25,7 +27,7 @@
 <div class="card">
     <!-- /.card-header -->
     <div class="card-body mt-5">
-        <form action="/admin/pernikahan/{{$data->id}}/update" method="post" enctype="multipart/form-data">
+        <form action="/admin/pernikahan/store" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group row">
@@ -33,7 +35,7 @@
 
                 <div class="col-md-6">
                     <input id="name1" type="text" class="form-control @error('name1') is-invalid @enderror" name="name1"
-                        value="{{ $data-> name1}}" autofocus>
+                        value="" autofocus>
 
                     @error('name1')
                     <span class="invalid-feedback" role="alert">
@@ -48,7 +50,7 @@
 
                 <div class="col-md-6">
                     <input id="name2" type="text" class="form-control @error('name2') is-invalid @enderror" name="name2"
-                        value="{{ $data-> name2}}" autofocus>
+                        value="" autofocus>
 
                     @error('name2')
                     <span class="invalid-feedback" role="alert">
@@ -67,9 +69,10 @@
                             <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
                         </div>
                         <input id="date" type="text" class="datepicker form-control @error('date') is-invalid @enderror"
-                            name="date" value="{{ $data-> date}}" autofocus autocomplete="off" autocorrect="off"
-                            autocapitalize="off" spellcheck="false">
+                            name="date" value="" autofocus autocomplete="off" autocorrect="off" autocapitalize="off"
+                            spellcheck="false">
                     </div>
+
                     @error('date')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -79,19 +82,14 @@
             </div>
 
             <div class="form-group row mb-0">
-                <div class="col-md-4 offset-md-2 ">
+                <div class="col-md-6 offset-md-2 text-right">
                     <input type="submit" class="btn btn-primary" value="Simpan">
-                </div>
-                <div class="col-md-2 text-right">
-                    <a href="/admin/pernikahan/{{$data->id}}/delete" class="btn btn-danger btn-md" role="button"
-                        aria-disabled="true">Hapus</a>
                 </div>
             </div>
         </form>
     </div>
     <!-- /.card-body -->
 </div>
-<!-- /.card-body -->
 
 <!-- jQuery -->
 <script src="{{ asset('admin-lte/plugins/jquery/jquery.min.js') }}"></script>
@@ -111,6 +109,7 @@
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 <!-- Page specific script -->
+<!-- Javascript Bootstrap Datepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 
 <script>

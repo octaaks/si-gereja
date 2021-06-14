@@ -110,6 +110,7 @@ class FrontendController extends Controller
         Mail::send('email_template', [
             'name' => $request->name,
             'email' => $request->email,
+            'no_hp' => $request->no_hp,
             'email_body' => $request->message
              
             ], function ($mail) use ($request) {

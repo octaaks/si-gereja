@@ -219,6 +219,33 @@ class HomeController extends Controller
         return view('jemaat', ['data'=>$data]);
     }
 
+    public function jemaatCreate()
+    {
+        return view('jemaatInsert');
+    }
+
+    public function jemaatStore(Request $request)
+    {
+        $request->validate([
+            'no_kk'             => 'required',
+            'nik'               => 'required',
+            'name'              => 'required',
+            'head_of_family'    => 'required',
+            'birthplace'        => 'required',
+            'date_of_birth'     => 'required',
+        ]);
+        $jemaat = new Jemaat;
+        $jemaat->no_kk            = $request-> no_kk;
+        $jemaat->nik              = $request-> nik;
+        $jemaat->name             = $request-> name;
+        $jemaat->head_of_family   = $request-> head_of_family;
+        $jemaat->birthplace       = $request-> birthplace;
+        $jemaat->date_of_birth    = $request-> date_of_birth;
+        $jemaat->save();
+        
+        return redirect('/admin/jemaat')->with('success', 'Data telah disimpan!');
+    }
+
     public function jemaatView($id)
     {
         $data = Jemaat::find($id);
@@ -243,6 +270,7 @@ class HomeController extends Controller
         if (!$jemaat) {
             return redirect('/admin/jemaat')->with('error', 'Data tidak ada!');
         }
+
         $jemaat->no_kk            = $request-> no_kk;
         $jemaat->nik              = $request-> nik;
         $jemaat->name             = $request-> name;
@@ -272,6 +300,28 @@ class HomeController extends Controller
         return view('pernikahan', ['data'=>$data]);
     }
     
+    public function pernikahanCreate()
+    {
+        return view('pernikahanInsert');
+    }
+
+    public function pernikahanStore(Request $request)
+    {
+        $request->validate([
+            'name1'=> 'required',
+            'name2'=> 'required',
+            'date' => 'required',
+        ]);
+
+        $pernikahan = new Pernikahan;
+        $pernikahan->name1   = $request-> name1;
+        $pernikahan->name2   = $request-> name2;
+        $pernikahan->date    = $request-> date;
+        $pernikahan->save();
+        
+        return redirect('/admin/pernikahan')->with('success', 'Data telah disimpan!');
+    }
+
     public function pernikahanView($id)
     {
         $data = Pernikahan::find($id);

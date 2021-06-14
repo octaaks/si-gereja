@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Lihat Data Pernikahan')
+@section('title', 'Tambah Data Jemaat')
 @section('content')
 
 
@@ -16,26 +16,27 @@
     <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
+
+    <!-- CSS Bootstrap Datepicker -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
-
 </head>
 
 <!-- /.card-header -->
 <div class="card">
     <!-- /.card-header -->
-    <div class="card-body mt-5">
-        <form action="/admin/pernikahan/{{$data->id}}/update" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <form action="/admin/jemaat/store" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group row">
-                <label for="name1" class="col-md-2 col-form-label text-md-right">Nama suami</label>
+                <label for="no_kk" class="col-md-2 col-form-label text-md-right">No KK</label>
 
                 <div class="col-md-6">
-                    <input id="name1" type="text" class="form-control @error('name1') is-invalid @enderror" name="name1"
-                        value="{{ $data-> name1}}" autofocus>
+                    <input id="no_kk" type="text" class="form-control @error('no_kk') is-invalid @enderror" name="no_kk"
+                        value="" autofocus>
 
-                    @error('name1')
+                    @error('no_kk')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -44,13 +45,13 @@
             </div>
 
             <div class="form-group row">
-                <label for="name2" class="col-md-2 col-form-label text-md-right">Nama istri</label>
+                <label for="nik" class="col-md-2 col-form-label text-md-right">NIK</label>
 
                 <div class="col-md-6">
-                    <input id="name2" type="text" class="form-control @error('name2') is-invalid @enderror" name="name2"
-                        value="{{ $data-> name2}}" autofocus>
+                    <input id="nik" type="text" class="form-control @error('nik') is-invalid @enderror" name="nik"
+                        value="" autofocus>
 
-                    @error('name2')
+                    @error('nik')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -59,18 +60,65 @@
             </div>
 
             <div class="form-group row">
-                <label for="date" class="col-md-2 col-form-label text-md-right">Tgl penikahan</label>
+                <label for="name" class="col-md-2 col-form-label text-md-right">Nama</label>
+
+                <div class="col-md-6">
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                        value="" autofocus>
+
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="head_of_family" class="col-md-2 col-form-label text-md-right">Kepala kel.</label>
+
+                <div class="col-md-6">
+                    <input id="head_of_family" type="text"
+                        class="form-control @error('head_of_family') is-invalid @enderror" name="head_of_family"
+                        value="" autofocus>
+
+                    @error('head_of_family')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="birthplace" class="col-md-2 col-form-label text-md-right">Tpt lahir</label>
+
+                <div class="col-md-6">
+                    <input id="birthplace" type="text" class="form-control @error('birthplace') is-invalid @enderror"
+                        name="birthplace" value="" autofocus>
+
+                    @error('birthplace')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="date_of_birth" class="col-md-2 col-form-label text-md-right">Tgl Lahir</label>
 
                 <div class="col-md-6">
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
                         </div>
-                        <input id="date" type="text" class="datepicker form-control @error('date') is-invalid @enderror"
-                            name="date" value="{{ $data-> date}}" autofocus autocomplete="off" autocorrect="off"
+                        <input id="date_of_birth" type="text"
+                            class="datepicker form-control @error('date_of_birth') is-invalid @enderror"
+                            name="date_of_birth" value="" autofocus autocomplete="off" autocorrect="off"
                             autocapitalize="off" spellcheck="false">
                     </div>
-                    @error('date')
+                    @error('date_of_birth')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -79,12 +127,8 @@
             </div>
 
             <div class="form-group row mb-0">
-                <div class="col-md-4 offset-md-2 ">
+                <div class="col-md-6 offset-md-2 text-right">
                     <input type="submit" class="btn btn-primary" value="Simpan">
-                </div>
-                <div class="col-md-2 text-right">
-                    <a href="/admin/pernikahan/{{$data->id}}/delete" class="btn btn-danger btn-md" role="button"
-                        aria-disabled="true">Hapus</a>
                 </div>
             </div>
         </form>
@@ -111,6 +155,7 @@
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 <!-- Page specific script -->
+<!-- Javascript Bootstrap Datepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 
 <script>

@@ -32,6 +32,14 @@
 <div class="card">
     <!-- /.card-header -->
     <div class="card-body">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <a href="pernikahan/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">
+                    <i class="fas fa-plus mr-2"></i>Tambah Data
+                </a>
+            </div>
+        </div>
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>

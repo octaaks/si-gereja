@@ -7,7 +7,7 @@
 
 <body>
 
-    <p>Dari: {{ $name }} - {{$email}}</p>
+    <p>Dari: {{ $name }} - {{$email}} - {{$no_hp}}</p>
     <p>{{ $email_body }}</p>
 </body>
 

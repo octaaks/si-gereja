@@ -81,7 +81,6 @@
 </head>
 
 <body>
-
     @if(session('success'))
     <div class="alert alert-success" role="alert">
         {{session('success')}}
@@ -95,10 +94,11 @@
     <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
-            <div style="margin:10px" class="row">
+            <div class="row mb-3">
                 <div class="col-md-auto">
-                    <a href="liturgi/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">Upload
-                        Liturgi</a>
+                    <a href="liturgi/create" class="btn btn-primary btn-md" role="button" aria-disabled="true">
+                        <i class="fas fa-plus mr-2"></i> Upload Liturgi
+                    </a>
                 </div>
             </div>
 
@@ -131,6 +131,7 @@
         <!-- /.card-body -->
     </div>
     <!-- /.card-body -->
+
 </body>
 <!-- jQuery -->
 <script src="{{ asset('admin-lte/plugins/jquery/jquery.min.js') }}"></script>

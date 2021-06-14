@@ -41,10 +41,10 @@
     <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
-            <div style="margin:10px" class="row">
+            <div class="row mb-3">
                 <div class="col-md-auto">
                     <a href="{{ route("create_video") }}" class="btn btn-primary btn-md" role="button"
-                        aria-disabled="true">Tambahkan Video Ibadah</a>
+                        aria-disabled="true"><i class="fas fa-plus mr-2"></i>Tambahkan Video Ibadah</a>
                 </div>
             </div>
 
