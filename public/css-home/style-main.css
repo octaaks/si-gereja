@@ -701,7 +701,8 @@ footer .copyright {
 
 .service-11 .card.card-shadow {
     -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.5);
+    background-color: #efefef;
     text-align: center;
 }
 
@@ -895,4 +896,13 @@ footer .copyright {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 992px) {
+    .list-title {
+        font-family: 'Poppins', sans-serif;
+        /* font-family: 'Oswald', sans-serif; */
+        color: #040505;
+        font-size: 1rem;
+    }
 }

@@ -11,6 +11,10 @@
 
 /* Navbar */
 
+.nav-logo {
+    height: 50px;
+}
+
 nav .btn,
 header .btn,
 .btn-wrapper .btn {
@@ -200,6 +204,7 @@ header .btn-primary:hover,
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
 
+
     .navbar-brand,
     .nav-link {
         /* color: white !important; */
@@ -246,4 +251,12 @@ header .btn-primary:hover,
         font-size: 32px;
     }
 
+}
+
+/* //big screen ++ */
+
+@media (min-width: 768px) {
+    .nav-logo {
+        height: 60px;
+    }
 }

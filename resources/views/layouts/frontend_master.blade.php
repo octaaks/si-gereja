@@ -58,7 +58,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eeeeee;">
         <div class="container">
-            <a class="navbar-brand" href="/"><img style="height:70px" src="{{ asset('img/logo1.png') }}" alt=""></a>
+            <a class="navbar-brand" href="/"><img class="nav-logo" src="{{ asset('img/logo1.png') }}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

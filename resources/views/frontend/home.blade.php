@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gereja</title>
+    <title>GKE Haleluya Nanga Bulik</title>
     <link rel="stylesheet" href="/css-home/style-main.css">
     <link rel="stylesheet" href="/css-home/style-header.css">
 
@@ -28,7 +28,7 @@
                 <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
-                        <a class="navbar-brand" href="#"><img style="height:70px" src="./img/logo1.png" alt=""></a>
+                        <a class="navbar-brand" href="#"><img class="nav-logo" src="/img/logo1.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -302,7 +302,7 @@
 
 <div style="background:#ffffff; padding:20px; text-align:center;">
 
-    <img style="height:40px; margin-right:20px" src="./img/logo.png" alt="">Copyright 2021 "©" Joeee. All Right
+    <img style="height:40px; margin-right:20px" src="/img/logo.png" alt="">Copyright 2021 "©" Joeee. All Right
     Reserved.
 </div>
 
