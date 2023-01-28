@@ -8,12 +8,15 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('admin-lte/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('admin-lte/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- DataTables -->
-    <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet"
         href="{{ asset('admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-lte/dist/css/adminlte.min.css') }}">
 
@@ -37,9 +40,9 @@
                         value="" autofocus>
 
                     @error('no_kk')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
                 </div>
             </div>
@@ -52,9 +55,9 @@
                         value="" autofocus>
 
                     @error('nik')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
                 </div>
             </div>
@@ -67,10 +70,29 @@
                         value="" autofocus>
 
                     @error('name')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="lingkungan_id" class="col-md-2 col-form-label text-md-right">Lingkungan</label>
+
+                <div class="col-md-6">
+                    <select name="lingkungan_id" id="lingkungan_id" class="form-control">
+                        <option value="" selected="selected">Pilih Lingkungan Jemaat</option>
+                        
+                        @foreach($lingkungan as $key=>$l)
+                            <option value="{{ $l-> id }}">{{ $l->nama_lingkungan }}</option>
+                        @endforeach
+                        @error('category_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </select>
                 </div>
             </div>
 
@@ -83,9 +105,9 @@
                         value="" autofocus>
 
                     @error('head_of_family')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
                 </div>
             </div>
@@ -98,9 +120,9 @@
                         name="birthplace" value="" autofocus>
 
                     @error('birthplace')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
                 </div>
             </div>
@@ -119,9 +141,9 @@
                             autocapitalize="off" spellcheck="false">
                     </div>
                     @error('date_of_birth')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
                 </div>
             </div>
@@ -143,38 +165,51 @@
 <!-- <script src="{{ asset('admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script> -->
 <!-- DataTables  & Plugins -->
 <script src="{{ asset('admin-lte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}">
+</script>
+<script
+    src="{{ asset('admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}">
+</script>
+<script
+    src="{{ asset('admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}">
+</script>
+<script
+    src="{{ asset('admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}">
+</script>
+<script
+    src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}">
+</script>
 <script src="{{ asset('admin-lte/plugins/jszip/jszip.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/pdfmake/pdfmake.min.js') }}"></script>
 <script src="{{ asset('admin-lte/plugins/pdfmake/vfs_fonts.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
-<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js') }}">
+</script>
+<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js') }}">
+</script>
+<script src="{{ asset('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}">
+</script>
 <!-- Page specific script -->
 <!-- Javascript Bootstrap Datepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 
 <script>
-jQuery(document).ready(function($) {
-    /* now you can use $ */
-    $("#example1").DataTable({
-        "responsive": true,
-        "lengthChange": false,
-        "autoWidth": false,
-        "searching": false,
-        "paging": false,
-        "info": false
-        // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    jQuery(document).ready(function ($) {
+        /* now you can use $ */
+        $("#example1").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "searching": false,
+            "paging": false,
+            "info": false
+            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
-    $('.datepicker').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true
+        $('.datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
     });
-});
+
 </script>
 @endsection

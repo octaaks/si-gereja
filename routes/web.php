@@ -58,6 +58,14 @@ Route::middleware('role:admin')->get('admin/jemaat/create', 'HomeController@jema
 Route::middleware('role:admin')->post('admin/jemaat/store', 'HomeController@jemaatStore')->name('store_jemaat');
 Route::middleware('role:admin')->post('admin/jemaat/{id}/update', 'HomeController@jemaatUpdate')->name('update_jemaat');
 Route::middleware('role:admin')->get('admin/jemaat/{id}/delete', 'HomeController@jemaatDelete')->name('delete_jemaat');
+Route::middleware('role:admin')->get('admin/jemaatByLingkungan/{id}', 'HomeController@jemaatFilterByLingkungan')->name('filter_jemaat');
+
+Route::middleware('role:admin')->get('admin/lingkungan', 'LingkunganController@index')->name('lingkungan');
+Route::middleware('role:admin')->get('admin/lingkungan/{id}/edit', 'LingkunganController@edit')->name('edit_lingkungan');
+Route::middleware('role:admin')->get('admin/lingkungan/create', 'LingkunganController@create')->name('create_lingkungan');
+Route::middleware('role:admin')->post('admin/lingkungan/{id}/update', 'LingkunganController@update')->name('update_lingkungan');
+Route::middleware('role:admin')->post('admin/lingkungan/store', 'LingkunganController@store')->name('store_lingkungan');
+Route::middleware('role:admin')->get('admin/lingkungan/{id}/delete', 'LingkunganController@destroy')->name('delete_lingkungan');
 
 Route::middleware('role:admin')->get('admin/pernikahan', 'HomeController@pernikahan')->name('pernikahan');
 Route::middleware('role:admin')->get('admin/pernikahan/{id}/view', 'HomeController@pernikahanView')->name('view_pernikahan');

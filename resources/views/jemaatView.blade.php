@@ -74,6 +74,29 @@
             </div>
 
             <div class="form-group row">
+                <label for="lingkungan_id" class="col-md-2 col-form-label text-md-right">Lingkungan</label>
+
+                <div class="col-md-6">
+                    <select name="lingkungan_id" id="lingkungan_id" class="form-control">
+                        @if(isset($data->lingkungan_id))
+                            <option selected value="{{ $data->lingkungan_id }}" disabled="disabled">{{$data->Lingkungan()->first()->nama_lingkungan}}</option>
+                        @else
+                            <option selected value="null" disabled="disabled">Data lingkungan terhapus</option>
+                        @endif
+                        
+                        @foreach($lingkungan as $key=>$l)
+                            <option value="{{ $l-> id }}">{{ $l->nama_lingkungan }}</option>
+                        @endforeach
+                    </select>
+                    @error('lingkungan_id')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
                 <label for="head_of_family" class="col-md-2 col-form-label text-md-right">Kepala kel.</label>
 
                 <div class="col-md-6">
@@ -153,7 +176,7 @@
                     <th>No</th>
                     <td>No KK</td>
                     <td>NIK</td>
-                    <th>Kepala Keluarga</th>
+                    {{-- <th>Kepala Keluarga</th> --}}
                     <th>Nama</th>
                     <th>Tmpt Lahir</th>
                     <th>Tgl Lahir</th>
@@ -165,7 +188,7 @@
                     <td>{{ $index +1 }}</td>
                     <td>{{ $item-> no_kk }}</td>
                     <td>{{ $item-> nik }}</td>
-                    <td>{{ $item-> head_of_family }}</td>
+                    {{-- <td>{{ $item-> head_of_family }}</td> --}}
                     <td><a href="/admin/jemaat/{{ $item->id }}/view">{{ $item-> name}}</a></td>
                     <td>{{ $item-> birthplace}}</td>
                     <td>{{ $item-> date_of_birth}}</td>

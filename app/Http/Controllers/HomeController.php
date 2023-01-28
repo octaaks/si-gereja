@@ -8,6 +8,7 @@ use App\Jemaat;
 use App\Pernikahan;
 use App\Liturgi;
 use App\Warta;
+use App\Lingkungan;
 use Carbon\Carbon;
 
 use Illuminate\Support\Facades\Mail;
@@ -216,12 +217,24 @@ class HomeController extends Controller
     public function jemaat()
     {
         $data = Jemaat::all();
-        return view('jemaat', ['data'=>$data]);
+        $lingkungan = Lingkungan::all();
+        return view('jemaat', ['data'=>$data, 'lingkungan'=>$lingkungan]);
+    }
+
+    public function jemaatFilterByLingkungan($idLingkungan)
+    {
+        $selectedLingkungan = Lingkungan::find($idLingkungan);
+        $data = Jemaat::where('lingkungan_id', '=', $selectedLingkungan->id)->get();
+        
+        $lingkungan = Lingkungan::all();
+
+        return view('jemaat', ['data'=>$data, 'lingkungan'=>$lingkungan]);
     }
 
     public function jemaatCreate()
     {
-        return view('jemaatInsert');
+        $lingkungan = Lingkungan::all();
+        return view('jemaatInsert', ['lingkungan'=>$lingkungan]);
     }
 
     public function jemaatStore(Request $request)
@@ -230,6 +243,7 @@ class HomeController extends Controller
             'no_kk'             => 'required',
             'nik'               => 'required',
             'name'              => 'required',
+            'lingkungan_id'     => 'required',
             'head_of_family'    => 'required',
             'birthplace'        => 'required',
             'date_of_birth'     => 'required',
@@ -238,6 +252,7 @@ class HomeController extends Controller
         $jemaat->no_kk            = $request-> no_kk;
         $jemaat->nik              = $request-> nik;
         $jemaat->name             = $request-> name;
+        $jemaat->lingkungan_id    = $request-> lingkungan_id;
         $jemaat->head_of_family   = $request-> head_of_family;
         $jemaat->birthplace       = $request-> birthplace;
         $jemaat->date_of_birth    = $request-> date_of_birth;
@@ -250,8 +265,9 @@ class HomeController extends Controller
     {
         $data = Jemaat::find($id);
         $relate = Jemaat::where('no_kk', '=', $data->no_kk)->get();
+        $lingkungan = Lingkungan::all();
         
-        return view('jemaatView', ['data'=>$data, 'relate'=>$relate]);
+        return view('jemaatView', ['data'=>$data, 'relate'=>$relate, 'lingkungan'=>$lingkungan]);
     }
 
     public function jemaatUpdate(Request $request, $id)
@@ -260,6 +276,7 @@ class HomeController extends Controller
             'no_kk'             => 'required',
             'nik'               => 'required',
             'name'              => 'required',
+            'lingkungan_id'     => 'required',
             'head_of_family'    => 'required',
             'birthplace'        => 'required',
             'date_of_birth'     => 'required',
@@ -274,6 +291,7 @@ class HomeController extends Controller
         $jemaat->no_kk            = $request-> no_kk;
         $jemaat->nik              = $request-> nik;
         $jemaat->name             = $request-> name;
+        $jemaat->lingkungan_id    = $request-> lingkungan_id;
         $jemaat->head_of_family   = $request-> head_of_family;
         $jemaat->birthplace       = $request-> birthplace;
         $jemaat->date_of_birth    = $request-> date_of_birth;

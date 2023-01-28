@@ -1,0 +1,4 @@
+﻿pengelompokkan jemaat berdasarkan lingkungan
+menu settings
+model : lingkungan
+add field lingkungan to jemaat

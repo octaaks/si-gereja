@@ -146,6 +146,16 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="/admin/lingkungan" class="nav-link ">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    Data Lingkungan Jemaat
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="/admin/pernikahan" class="nav-link ">
                                 <i class="nav-icon fas fa-birthday-cake"></i>
                                 <p>

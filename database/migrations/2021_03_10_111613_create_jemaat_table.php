@@ -21,6 +21,14 @@ class CreateJemaatTable extends Migration
             $table->string('name', 191);
             $table->string('birthplace', 191);
             $table->date('date_of_birth');
+            
+            $table->bigInteger('lingkungan_id')->unsigned()->nullable();
+            $table->foreign('lingkungan_id')
+            ->references('id')
+            ->on('lingkungan')
+            ->onCascade('set null')
+            ->onDelete('set null');
+            
             $table->timestamps();
         });
     }
